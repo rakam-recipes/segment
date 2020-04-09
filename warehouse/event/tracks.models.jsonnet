@@ -1,5 +1,5 @@
-local util = import '../../../util.libsonnet';
 local commonDimensions = import '../common_dimensions.jsonnet';
+local util = import 'util.libsonnet';
 
 if std.extVar('tracks_target') == null then [] else [{
   name: 'segment_events',

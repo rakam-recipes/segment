@@ -1,4 +1,4 @@
-local util = import '../../../util.libsonnet';
+local util = import 'util.libsonnet';
 local event_types = std.extVar('event_types');
 
 if event_types == null then [] else
