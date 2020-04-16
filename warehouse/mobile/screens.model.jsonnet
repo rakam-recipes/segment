@@ -5,7 +5,7 @@ local pages = import '../page/pages.models.jsonnet';
 local embeddedDimensions = config.variables.screens_event_attributes.options.exclude;
 local screenDimensions = std.foldl(function(a, b) a { [b]: { column: b, category: 'Mobile' } }, embeddedDimensions, {});
 
-if std.extVar('screens_target') != null then [{
+if std.extVar('screens_target') != null then {
   name: 'screens',
   label: '[Segment] Mobile Screen',
   category: 'Segment Events',
@@ -26,4 +26,4 @@ if std.extVar('screens_target') != null then [{
       column: 'context_device_id',
     },
   },
-}] else []
+} else null
