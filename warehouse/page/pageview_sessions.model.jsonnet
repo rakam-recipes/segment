@@ -1,7 +1,5 @@
 local util = import 'util.libsonnet';
 
-local dbtModel = (importstr 'rakam_segment_web_sessions.sql');
-
 /* We will extract the first values of the events in a given session from pageview events and materialize it in our model.
  key: column_column
  value: dimension with target column name
@@ -30,13 +28,6 @@ if std.extVar('session_model_target') != null then {
   label: '[Segment] Pageview Sessions',
   description: 'Website session information for the pageview event',
   hidden: false,
-  sql: util.generate_jinja_header({
-    inactivity_cutoff: std.extVar('session_duration_in_minutes'),
-    sessionization_trailing_window: 2.0,
-    pages_target: util.generate_target_reference(std.extVar('pages_target')),
-    first_values: { [k]: first_values[k].column for k in std.objectFields(first_values) },
-    last_values: { [k]: last_values[k].column for k in std.objectFields(last_values) },
-  }) + dbtModel,
   category: 'Segment Events',
   target: std.extVar('session_model_target'),
   persist: {
