@@ -2,7 +2,7 @@ local commonDimensions = import '../common_dimensions.jsonnet';
 local sessionsModel = import './pageview_sessions.models.jsonnet';
 
 
-if std.extVar('pages_target') != null then [{
+if std.extVar('pages_target') != null then {
   name: 'segment_pages',
   label: '[Segment] Pageview',
   description: "The pageview data that's collected via Segment Javascript SDK",
@@ -175,4 +175,4 @@ if std.extVar('pages_target') != null then [{
       column: 'context_page_referrer',
     },
   },
-}] else []
+} else null

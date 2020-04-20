@@ -140,4 +140,27 @@
     },
   },
   tags: ['event-analytics', 'mobile-analytics', 'pageview-analytics', 'attribution'],
+  dependencies: {
+    dbt: {
+      cronjob: null,
+      dbt_project: {
+        models: {
+          segment: {
+            vars: {
+              segment_page_views_table: "{{ source('segment', 'pages') }}",
+              segment_sessionization_trailing_window: 3,
+              segment_inactivity_cutoff: '30 * 60',
+              segment_pass_through_columns: [],
+            },
+          },
+
+        },
+      },
+      packages: [
+        {
+          git: 'https://github.com/rakam-io/dbt-utils',
+        },
+      ],
+    },
+  },
 }

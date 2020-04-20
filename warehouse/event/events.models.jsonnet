@@ -1,7 +1,7 @@
 local util = import 'util.libsonnet';
 local event_types = std.extVar('event_types');
 
-if event_types == null then [] else
+if event_types == null then null else
   std.map(function(event_table) {
     target: { database: event_types.database, schema: event_types.schema, table: event_table },
     name: 'event_' + event_table,
