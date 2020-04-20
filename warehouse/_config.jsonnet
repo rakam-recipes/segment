@@ -106,7 +106,7 @@
     session_model_target: {
       parent: 'pages_target',
       label: 'The target of the sessionization model',
-      type: 'target',
+      type: 'table',
       required: false,
       default: { table: 'rakam_segment_web_sessions' },
       description: 'We need to create an incremental model in your warehouse in order the sessionize your pageview table.',
@@ -141,26 +141,26 @@
   },
   tags: ['event-analytics', 'mobile-analytics', 'pageview-analytics', 'attribution'],
   dependencies: {
-    dbt: {
+    dbt: if (std.extVar('pages_target') != null) then {
       cronjob: null,
       dbt_project: {
         models: {
           segment: {
             vars: {
-              segment_page_views_table: "{{ source('segment', 'pages') }}",
+              segment_page_views_table: util.generate_target_reference(std.extVar('pages_target')),
               segment_sessionization_trailing_window: 3,
-              segment_inactivity_cutoff: '30 * 60',
+              segment_inactivity_cutoff: std.extVar('session_duration_in_minutes') + ' * 60',
               segment_pass_through_columns: [],
             },
           },
-
         },
       },
       packages: [
         {
-          git: 'https://github.com/rakam-io/dbt-utils',
+          package: 'https://github.com/fishtown-analytics/segment',
+          version: '0.2.5',
         },
       ],
-    },
+    } else null,
   },
 }
