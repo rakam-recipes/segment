@@ -1,4 +1,4 @@
-{
+function(pages_target=null, session_duration_in_minutes=null) {
   version: 1.1,
   label: 'Segment Warehouse',
   description: 'It implements pageview, mobile and event analytics models for Segment Warehouse.',
@@ -141,15 +141,15 @@
   },
   tags: ['event-analytics', 'mobile-analytics', 'pageview-analytics', 'attribution'],
   dependencies: {
-    dbt: if (std.extVar('pages_target') != null) then {
+    dbt: if (pages_target != null) then {
       cronjob: null,
       dbt_project: {
         models: {
           segment: {
             vars: {
-              segment_page_views_table: util.generate_target_reference(std.extVar('pages_target')),
+              segment_page_views_table: util.generate_target_reference(pages_target),
               segment_sessionization_trailing_window: 3,
-              segment_inactivity_cutoff: std.extVar('session_duration_in_minutes') + ' * 60',
+              segment_inactivity_cutoff: session_duration_in_minutes + ' * 60',
               segment_pass_through_columns: [],
             },
           },
