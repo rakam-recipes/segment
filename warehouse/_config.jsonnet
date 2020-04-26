@@ -1,3 +1,5 @@
+local util = import 'util.libsonnet';
+
 function(pages_target=null, session_duration_in_minutes=null) {
   version: 1.1,
   label: 'Segment Warehouse',
