@@ -159,7 +159,7 @@ function(pages_target=null, session_duration_in_minutes=null) {
       },
       packages: [
         {
-          package: 'https://github.com/fishtown-analytics/segment',
+          package: 'fishtown-analytics/segment',
           version: '0.2.5',
         },
       ],
