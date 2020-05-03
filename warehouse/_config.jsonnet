@@ -80,6 +80,7 @@ function(pages_target=null, session_duration_in_minutes=null) {
           label: 'Campaign Content',
           category: 'Marketing',
           column: 'context_campaign_content',
+          type: 'string',
         },
         campaign_medium: {
           label: 'Campaign Medium',

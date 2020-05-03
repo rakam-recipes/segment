@@ -39,13 +39,16 @@ if std.extVar('pages_target') != null then {
   dimensions: commonDimensions + std.extVar('pages_campaign_columns') + {
     page_url_host: {
       description: 'Host value extracted from the url',
+      type: 'string',
       sql: "split_part(split_part(replace(replace({{TABLE}}.url, 'http://', ''), 'https://', ''), '/', 1), '?', 1)",
     },
     page_referrer_host: {
+      type: 'string',
       description: 'Referrer host extracted from the referrer url',
       sql: "split_part(split_part(replace(replace({{TABLE}}.referrer, 'http://', ''), 'https://', ''), '/', 1), '?', 1)",
     },
     gclid: {
+      type: 'string',
       description: 'Google Click Identifier extracted from the referrer url',
       sql: "split_part(split_part(replace(replace({{TABLE}}.referrer, 'http://', ''), 'https://', ''), '/', 1), '?', 1)",
     },
@@ -64,6 +67,7 @@ if std.extVar('pages_target') != null then {
     browser: {
       description: 'The browser type parsed from the user agent',
       category: 'Website',
+      type: 'string',
       sql: |||
         (CASE
           WHEN {{TABLE}}.context_user_agent LIKE '%Firefox/%' THEN 'Firefox'
@@ -122,6 +126,7 @@ if std.extVar('pages_target') != null then {
     user_agent: {
       column: 'context_user_agent',
       category: 'Website',
+      type: 'string',
     },
     page_path: {
       category: 'Website',
@@ -150,6 +155,7 @@ if std.extVar('pages_target') != null then {
     },
     device_category: {
       description: 'The device category',
+      type: 'string',
       sql: |||
         (case replace(split_part(split_part({{TABLE}}.context_user_agent, '(', 2), ' ', 1), ';', '')
             when 'iPhone' then 'iPhone'
