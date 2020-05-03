@@ -21,9 +21,11 @@ if std.extVar('identifies_target') == null then null else {
     received_at: {
       label: 'Date',
       column: 'received_at',
+      type: 'timestamp',
     },
     id: {
       column: 'id',
+      type: 'string',
     },
   },
 }
