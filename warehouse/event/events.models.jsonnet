@@ -43,21 +43,18 @@ if event_types == null then null else
       id: {
         description: 'An ID attached to the event at execution time and used for deduplication at the server level.',
         column: 'id',
-
+        type: 'string',
       },
       sent_at: {
         description: 'The UTC timestamp set by library when the Segment API call was sent. This timestamp can be affected by device clock skew.',
         column: 'sent_at',
-
-
+        type: 'timestamp',
       },
       anonymous_id: {
         description: 'The anonymous ID of the user',
         category: 'Event',
         type: 'string',
         column: 'anonymous_id',
-
-
       },
       context_ip: {
         label: 'User Ip',
