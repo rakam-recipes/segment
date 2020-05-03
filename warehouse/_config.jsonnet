@@ -145,7 +145,7 @@ function(pages_target=null, session_duration_in_minutes=null) {
   dependencies: {
     dbt: if (pages_target != null) then {
       cronjob: null,
-      dbt_project: {
+      dbtProject: {
         models: {
           segment: {
             vars: {
