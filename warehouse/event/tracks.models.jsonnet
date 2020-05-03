@@ -51,6 +51,7 @@ if std.extVar('tracks_target') == null then [] else [{
     event_text: {
       description: 'The name of the event.',
       column: 'event_text',
+      type: 'string',
     },
   },
 }]
