@@ -18,6 +18,7 @@
     },
     user_id: {
       column: 'id',
+      type: 'string',
     },
   },
 }
