@@ -42,7 +42,7 @@
           },
           columnOptions: null,
         },
-        defaultDateRange: 'P14D',
+
         limit: 1000,
         filters: null,
       },
@@ -67,7 +67,7 @@
           },
         ],
         reportOptions: null,
-        defaultDateRange: 'P14D',
+
         limit: 1000,
         filters: null,
       },
@@ -92,7 +92,7 @@
           },
         ],
         reportOptions: null,
-        defaultDateRange: 'P14D',
+
         limit: 1000,
         filters: null,
       },
@@ -117,7 +117,7 @@
           },
         ],
         reportOptions: null,
-        defaultDateRange: 'P14D',
+
         limit: 1000,
         filters: null,
       },
@@ -161,7 +161,7 @@
           },
           columnOptions: null,
         },
-        defaultDateRange: 'P14D',
+
         limit: 1000,
         filters: null,
       },
@@ -195,7 +195,7 @@
           },
           columnOptions: null,
         },
-        defaultDateRange: 'P14D',
+
         limit: 1000,
         filters: null,
       },
@@ -229,7 +229,7 @@
           },
           columnOptions: null,
         },
-        defaultDateRange: 'P14D',
+
         limit: 1000,
         filters: null,
       },
@@ -277,7 +277,7 @@
           },
           columnOptions: null,
         },
-        defaultDateRange: 'P14D',
+
         limit: 1000,
         filters: null,
       },
@@ -309,7 +309,7 @@
           },
         ],
         reportOptions: null,
-        defaultDateRange: 'P14D',
+
         limit: 1000,
         filters: null,
       },

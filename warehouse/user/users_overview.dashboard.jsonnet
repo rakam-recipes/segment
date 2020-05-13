@@ -43,7 +43,7 @@ local attrs = std.extVar('attributions');
                    },
                    columnOptions: null,
                  },
-                 defaultDateRange: 'P14D',
+
                  limit: 1000,
                  filters: [
                    {
@@ -100,7 +100,7 @@ local attrs = std.extVar('attributions');
                    },
                    columnOptions: null,
                  },
-                 defaultDateRange: 'P14D',
+
                  limit: 1000,
                  filters: null,
                },
@@ -133,7 +133,7 @@ local attrs = std.extVar('attributions');
                    },
                    columnOptions: null,
                  },
-                 defaultDateRange: 'P14D',
+
                  limit: 1000,
                  filters: [
                    {
@@ -195,7 +195,7 @@ local attrs = std.extVar('attributions');
                  },
                  columnOptions: null,
                },
-               defaultDateRange: 'P14D',
+
                limit: 1000,
                filters: null,
              },
@@ -239,7 +239,7 @@ local attrs = std.extVar('attributions');
                  },
                  columnOptions: null,
                },
-               defaultDateRange: 'P14D',
+
                limit: 1000,
                filters: null,
              },

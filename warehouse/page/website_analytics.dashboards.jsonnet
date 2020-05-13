@@ -56,7 +56,7 @@ if std.extVar('pages_target') != null then [{
           },
           columnOptions: null,
         },
-        defaultDateRange: 'P14D',
+
         limit: 5000,
         filters: null,
         orders: null,
@@ -101,7 +101,7 @@ if std.extVar('pages_target') != null then [{
           },
           columnOptions: null,
         },
-        defaultDateRange: 'P14D',
+
         limit: 5000,
         filters: null,
         orders: null,
@@ -135,7 +135,7 @@ if std.extVar('pages_target') != null then [{
           },
           columnOptions: null,
         },
-        defaultDateRange: 'P14D',
+
         limit: 5000,
         filters: null,
         orders: null,
@@ -184,7 +184,7 @@ if std.extVar('pages_target') != null then [{
           },
           columnOptions: null,
         },
-        defaultDateRange: 'P14D',
+
         limit: 5000,
         filters: null,
         orders: null,

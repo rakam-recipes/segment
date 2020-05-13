@@ -1,6 +1,4 @@
-local util = import 'util.libsonnet';
-
-function(pages_target=null, session_duration_in_minutes=null) {
+{
   version: 1.1,
   label: 'Segment Warehouse',
   description: 'It implements pageview, mobile and event analytics models for Segment Warehouse.',
@@ -143,27 +141,4 @@ function(pages_target=null, session_duration_in_minutes=null) {
     },
   },
   tags: ['event-analytics', 'mobile-analytics', 'pageview-analytics', 'attribution'],
-  dependencies: {
-    dbt: if (pages_target != null) then {
-      cronjob: null,
-      dbtProject: {
-        models: {
-          segment: {
-            vars: {
-              segment_page_views_table: util.generate_target_reference(pages_target),
-              segment_sessionization_trailing_window: 3,
-              segment_inactivity_cutoff: session_duration_in_minutes + ' * 60',
-              segment_pass_through_columns: [],
-            },
-          },
-        },
-      },
-      packages: [
-        {
-          package: 'fishtown-analytics/segment',
-          version: '0.2.5',
-        },
-      ],
-    } else null,
-  },
 }

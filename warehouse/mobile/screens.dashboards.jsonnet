@@ -40,7 +40,7 @@ if std.extVar('screens_target') != null then [
             },
             columnOptions: null,
           },
-          defaultDateRange: 'P14D',
+
           limit: 1000,
           filters: null,
         },
@@ -82,7 +82,7 @@ if std.extVar('screens_target') != null then [
             },
             columnOptions: null,
           },
-          defaultDateRange: 'P14D',
+
           limit: 1000,
           filters: null,
         },
@@ -107,7 +107,7 @@ if std.extVar('screens_target') != null then [
             },
           ],
           reportOptions: null,
-          defaultDateRange: 'P14D',
+
           limit: 1000,
           filters: null,
         },
@@ -132,7 +132,7 @@ if std.extVar('screens_target') != null then [
             },
           ],
           reportOptions: null,
-          defaultDateRange: 'P14D',
+
           limit: 1000,
           filters: null,
         },
@@ -173,7 +173,7 @@ if std.extVar('screens_target') != null then [
             },
             columnOptions: null,
           },
-          defaultDateRange: 'P14D',
+
           limit: 1000,
           filters: null,
         },
@@ -216,7 +216,7 @@ if std.extVar('screens_target') != null then [
             },
             columnOptions: null,
           },
-          defaultDateRange: 'P14D',
+
           limit: 1000,
           filters: null,
         },
@@ -259,7 +259,7 @@ if std.extVar('screens_target') != null then [
             },
             columnOptions: null,
           },
-          defaultDateRange: 'P14D',
+
           limit: 1000,
           filters: null,
         },
@@ -302,7 +302,7 @@ if std.extVar('screens_target') != null then [
             },
             columnOptions: null,
           },
-          defaultDateRange: 'P14D',
+
           limit: 1000,
           filters: null,
         },

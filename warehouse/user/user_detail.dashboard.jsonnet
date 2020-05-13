@@ -60,7 +60,7 @@
             columnOptions: [],
           },
         },
-        defaultDateRange: 'P14D',
+
         limit: 1000,
       },
     },
@@ -83,7 +83,7 @@
         }, std.objectFields(std.extVar('attributions'))),
         measures: [],
         reportOptions: null,
-        defaultDateRange: 'P14D',
+
         limit: 1000,
       },
     },
@@ -115,7 +115,7 @@
           },
         ],
         reportOptions: { chartOptions: { columnOptions: [], type: 'bar', orientation: 'h' }, tableOptions: { columnOptions: [] } },
-        defaultDateRange: 'P14D',
+
         limit: 1000,
       },
     },

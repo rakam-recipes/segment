@@ -1,7 +1,7 @@
 local commonDimensions = import '../common_dimensions.jsonnet';
 local util = import 'util.libsonnet';
 
-if std.extVar('tracks_target') == null then [] else [{
+if std.extVar('tracks_target') == null then null else {
   name: 'segment_events',
   label: '[Segment] All Events',
   category: 'Segment Events',
@@ -54,4 +54,4 @@ if std.extVar('tracks_target') == null then [] else [{
       type: 'string',
     },
   },
-}]
+}
