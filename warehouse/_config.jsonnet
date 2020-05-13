@@ -110,7 +110,7 @@
       type: 'target',
       required: false,
       default: { table: 'rakam_segment_web_sessions' },
-      description: 'We need to create an incremental model in your warehouse in order the sessionize your pageview table.',
+      description: 'The target table for session data created from raw pageviews.',
     },
     session_duration_in_minutes: {
       parent: 'session_model_target',
