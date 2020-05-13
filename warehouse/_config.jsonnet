@@ -107,7 +107,7 @@
     session_model_target: {
       parent: 'pages_target',
       label: 'The target of the sessionization model',
-      type: 'table',
+      type: 'target',
       required: false,
       default: { table: 'rakam_segment_web_sessions' },
       description: 'We need to create an incremental model in your warehouse in order the sessionize your pageview table.',
