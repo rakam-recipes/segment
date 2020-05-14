@@ -19,13 +19,22 @@
       options: {
         columns: {
           context_ip: {
-            default: 'context_ip',
+            column: 'context_ip',
+            label: 'User Ip',
+            category: 'Event',
+            type: 'string',
           },
           context_device_id: {
             default: 'context_device_id',
+            label: 'Device Ip',
+            category: 'Event',
+            type: 'string',
           },
           context_app_version: {
-            default: 'context_device_id',
+            column: 'context_app_version',
+            label: 'App Version',
+            category: 'Event',
+            type: 'string',
           },
         },
       },

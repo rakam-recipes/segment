@@ -15,12 +15,6 @@
     type: 'string',
     column: 'anonymous_id',
   },
-  context_ip: {
-    label: 'User Ip',
-    category: 'Event',
-    type: 'string',
-    column: 'context_ip',
-  },
   context_library_name: {
     label: 'Segment Library Name',
     category: 'Event',
