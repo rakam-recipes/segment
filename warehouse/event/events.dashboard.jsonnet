@@ -13,7 +13,7 @@
     },
   ],
   reports: [
-    {
+    if std.objectHas(context_columns, 'context_app_version') then {
       name: 'Events by Last Seen App Version',
       ttl: 'PT1H',
       x: 0,
@@ -53,7 +53,7 @@
         limit: 1000,
         filters: null,
       },
-    },
+    } else null,
     {
       name: 'Top Events',
       ttl: 'PT1H',
@@ -208,7 +208,7 @@
         filters: null,
       },
     },
-    {
+    if std.objectHas(context_columns, 'context_device_id') then {
       name: 'Total Devices',
       ttl: 'PT1H',
       x: 4,
@@ -242,6 +242,6 @@
         limit: 1000,
         filters: null,
       },
-    },
+    } else null,
   ],
 }
