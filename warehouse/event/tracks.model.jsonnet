@@ -34,13 +34,13 @@ if std.extVar('tracks_target') == null then null else {
                 column: 'user_id',
               },
             } +
-            if context_columns.context_app_version != null then {
+            if std.objectHas(context_columns, 'context_app_version') then {
               unique_devices: {
                 aggregation: 'countUnique',
                 column: 'context_device_id',
               },
             } else {} +
-                   if context_columns.context_app_version != null then {
+                   if std.objectHas(context_columns, 'context_app_version') then {
                      context_app_version: {
                        label: 'Last Seen App Version',
                        description: 'It helps you to identify deprecated events',
