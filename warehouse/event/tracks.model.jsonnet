@@ -1,6 +1,7 @@
 local commonDimensions = import '../common_dimensions.jsonnet';
 local util = import 'util.libsonnet';
 
+local context_columns = std.extVar('track_context');
 
 if std.extVar('tracks_target') == null then null else {
   name: 'segment_events',
@@ -25,30 +26,29 @@ if std.extVar('tracks_target') == null then null else {
     },
   },
   measures: {
-    total_events: {
-      aggregation: 'count',
-    },
-    unique_users: {
-      aggregation: 'countUnique',
-      column: 'user_id',
-    },
-    unique_devices: {
-      aggregation: 'countUnique',
-      column: 'context_device_id',
-    },
-    context_library_name: {
-      label: 'Platforms',
-      type: 'arrayString',
-      sql: 'array_agg({{TABLE}}.context_library_name)',
-    },
-    context_app_version: {
-      label: 'Last Seen App Version',
-      description: 'It helps you to identify deprecated events',
-      sql: 'max({{TABLE}}.context_app_version order by {{TABLE}}.received_at desc)',
-      type: 'string',
-    },
-  },
-  dimensions: commonDimensions {
+              total_events: {
+                aggregation: 'count',
+              },
+              unique_users: {
+                aggregation: 'countUnique',
+                column: 'user_id',
+              },
+            } +
+            if context_columns.context_app_version != null then {
+              unique_devices: {
+                aggregation: 'countUnique',
+                column: 'context_device_id',
+              },
+            } else {} +
+                   if context_columns.context_app_version != null then {
+                     context_app_version: {
+                       label: 'Last Seen App Version',
+                       description: 'It helps you to identify deprecated events',
+                       sql: 'max({{TABLE}}.context_app_version order by {{TABLE}}.received_at desc)',
+                       type: 'string',
+                     },
+                   } else {},
+  dimensions: commonDimensions + context_columns + {
     event_text: {
       description: 'The name of the event.',
       column: 'event_text',

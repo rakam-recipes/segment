@@ -14,28 +14,26 @@
     },
     track_context: {
       label: 'Context Columns',
-      type: 'table-mapping',
+      type: 'table-multiple-column',
       parent: 'tracks_target',
-      options: {
-        columns: {
-          context_ip: {
-            column: 'context_ip',
-            label: 'User Ip',
-            category: 'Event',
-            type: 'string',
-          },
-          context_device_id: {
-            default: 'context_device_id',
-            label: 'Device Ip',
-            category: 'Event',
-            type: 'string',
-          },
-          context_app_version: {
-            column: 'context_app_version',
-            label: 'App Version',
-            category: 'Event',
-            type: 'string',
-          },
+      default: {
+        context_ip: {
+          column: 'context_ip',
+          label: 'User Ip',
+          category: 'Event',
+          type: 'string',
+        },
+        context_device_id: {
+          default: 'context_device_id',
+          label: 'Device Ip',
+          category: 'Event',
+          type: 'string',
+        },
+        context_app_version: {
+          column: 'context_app_version',
+          label: 'App Version',
+          category: 'Event',
+          type: 'string',
         },
       },
     },
@@ -66,25 +64,8 @@
       description: 'Select the attributes that you want to turn into dimensions',
       options: {
         exclude: [
-          'context_app_version',
-          'context_screen_height',
-          'context_os_name',
-          'context_app_name',
-          'context_app_build',
-          'context_timezone',
-          'context_library_version',
-          'context_device_type',
-          'context_network_wifi',
-          'context_network_cellular',
-          'context_network_carrier',
-          'context_library_name',
           'context_device_advertising_id',
-          'context_screen_width',
           'context_device_token',
-          'context_device_model',
-          'context_device_manufacturer',
-          'context_device_ad_tracking_enabled',
-          'context_app_namespace',
         ],
       },
     },
