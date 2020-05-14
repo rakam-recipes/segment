@@ -12,6 +12,24 @@
       default: { table: 'tracks' },
       description: "The tracks table in your Segment Destination if you're tracking the custom events. See: https://segment.com/docs/destinations/#warehouse-schemas",
     },
+    track_context: {
+      label: 'Context Columns',
+      type: 'table-mapping',
+      parent: 'tracks_target',
+      options: {
+        columns: {
+          context_ip: {
+            default: 'context_ip',
+          },
+          context_device_id: {
+            default: 'context_device_id',
+          },
+          context_app_version: {
+            default: 'context_device_id',
+          },
+        },
+      },
+    },
     event_types: {
       label: 'Event types',
       type: 'multiple-table',

@@ -11,7 +11,6 @@ if event_types == null then [] else
     mappings: {
       eventTimestamp: 'received_at',
       userId: 'user_id',
-      deviceId: 'context_device_id',
       incremental: 'received_at',
     },
     relations: {
