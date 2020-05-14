@@ -1,3 +1,5 @@
+local context_columns = std.extVar('track_context');
+
 {
   name: 'Events Overview',
   category: 'Segment Events',
