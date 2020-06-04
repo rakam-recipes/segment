@@ -116,6 +116,7 @@
       parent: 'pages_target',
       label: 'The target of the sessionization model',
       type: 'target',
+      git: true,
       required: false,
       default: { table: 'rakam_segment_web_sessions' },
       description: 'The target table for session data created from raw pageviews.',
@@ -123,6 +124,7 @@
     session_duration_in_minutes: {
       parent: 'session_model_target',
       label: 'Session duration',
+      git: true,
       type: 'numeric',
       default: 30,
       description: 'The session duration in minutes',
