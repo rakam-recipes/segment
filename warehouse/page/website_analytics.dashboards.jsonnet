@@ -20,7 +20,7 @@ if std.extVar('pages_target') != null then [{
       h: 1,
       w: 5,
       component: 'r-number',
-      type: 1,
+      type: 'segmentation',
       reportOptions: {
         modelName: 'segment_rakam_pageview_sessions',
         dimensions: null,
@@ -69,7 +69,7 @@ if std.extVar('pages_target') != null then [{
       h: 2,
       w: 6,
       component: 'r-chart',
-      type: 1,
+      type: 'segmentation',
       reportOptions: {
         modelName: 'segment_pages',
         dimensions: [
@@ -114,7 +114,7 @@ if std.extVar('pages_target') != null then [{
       h: 1,
       w: 1,
       component: 'r-number',
-      type: 1,
+      type: 'segmentation',
       reportOptions: {
         modelName: 'segment_pages',
         dimensions: null,
@@ -148,7 +148,7 @@ if std.extVar('pages_target') != null then [{
       h: 1,
       w: 6,
       component: 'r-number',
-      type: 1,
+      type: 'segmentation',
       reportOptions: {
         modelName: 'segment_rakam_pageview_sessions',
         dimensions: null,

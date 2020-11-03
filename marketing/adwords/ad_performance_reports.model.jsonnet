@@ -56,8 +56,8 @@ local mappingForConsolidatedMarketing = std.mapWithKey(function(key, value) { hi
       relationType: 'manyToOne',
       joinType: 'leftJoin',
       modelName: 'adwords_ads',
-      sourceColumn: 'ad_id',
-      targetColumn: 'id',
+      source: 'ad_id',
+      target: 'id',
     },
   },
   dimensions: mappingForConsolidatedMarketing {

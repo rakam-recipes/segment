@@ -17,7 +17,6 @@
       value: {
         name: 'userId',
       },
-      defaultValue: ['NJKJ0HU20P'],
       isRequired: true,
     },
   ],
@@ -30,7 +29,7 @@
       h: 2,
       w: 3,
       component: 'r-segmentation-chart',
-      type: 1,
+      type: 'segmentation',
       reportOptions: {
         modelName: 'segment_events',
         dimensions: [
@@ -72,7 +71,7 @@
       h: 2,
       w: 6,
       component: 'r-number',
-      type: 1,
+      type: 'segmentation',
       reportOptions: {
         modelName: 'segment_users',
         dimensions: std.map(function(dimension) {
@@ -95,7 +94,7 @@
       h: 2,
       w: 3,
       component: 'r-segmentation-chart',
-      type: 1,
+      type: 'segmentation',
       reportOptions: {
         modelName: 'segment_events',
         dimensions: [

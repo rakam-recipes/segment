@@ -18,8 +18,8 @@ if event_types == null then [] else
         relationType: 'manyToOne',
         joinType: 'leftJoin',
         modelName: 'segment_users',
-        sourceColumn: 'user_id',
-        targetColumn: 'id',
+        source: 'user_id',
+        target: 'id',
       },
     },
     measures: {

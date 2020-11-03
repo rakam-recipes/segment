@@ -11,7 +11,7 @@ if std.extVar('screens_target') != null then [
         h: 2,
         w: 2,
         component: 'r-segmentation-chart',
-        type: 1,
+        type: 'segmentation',
         reportOptions: {
           modelName: 'screens',
           dimensions: [
@@ -53,7 +53,7 @@ if std.extVar('screens_target') != null then [
         h: 2,
         w: 3,
         component: 'r-segmentation-chart',
-        type: 1,
+        type: 'segmentation',
         reportOptions: {
           modelName: 'screens',
           dimensions: [
@@ -95,7 +95,7 @@ if std.extVar('screens_target') != null then [
         h: 1,
         w: 1,
         component: 'r-number',
-        type: 1,
+        type: 'segmentation',
         reportOptions: {
           modelName: 'screens',
           dimensions: [],
@@ -120,7 +120,7 @@ if std.extVar('screens_target') != null then [
         h: 1,
         w: 1,
         component: 'r-number',
-        type: 1,
+        type: 'segmentation',
         reportOptions: {
           modelName: 'screens',
           dimensions: [],
@@ -145,7 +145,7 @@ if std.extVar('screens_target') != null then [
         h: 2,
         w: 2,
         component: 'r-segmentation-chart',
-        type: 1,
+        type: 'segmentation',
         reportOptions: {
           modelName: 'screens',
           dimensions: [
@@ -186,7 +186,7 @@ if std.extVar('screens_target') != null then [
         h: 2,
         w: 6,
         component: 'r-segmentation-chart',
-        type: 1,
+        type: 'segmentation',
         reportOptions: {
           modelName: 'screens',
           dimensions: [
@@ -229,7 +229,7 @@ if std.extVar('screens_target') != null then [
         h: 2,
         w: 2,
         component: 'r-segmentation-chart',
-        type: 1,
+        type: 'segmentation',
         reportOptions: {
           modelName: 'screens',
           dimensions: [
@@ -272,7 +272,7 @@ if std.extVar('screens_target') != null then [
         h: 2,
         w: 2,
         component: 'r-segmentation-chart',
-        type: 1,
+        type: 'segmentation',
         reportOptions: {
           modelName: 'screens',
           dimensions: [

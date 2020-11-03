@@ -26,15 +26,15 @@ if std.extVar('pages_target') != null then {
       relationType: 'manyToOne',
       joinType: 'leftJoin',
       modelName: 'segment_users',
-      sourceColumn: 'user_id',
-      targetColumn: 'id',
+      source: 'user_id',
+      target: 'id',
     },
   } + if std.extVar('session_model_target') != null then { session: {
     relationType: 'oneToOne',
     joinType: 'leftJoin',
     modelName: 'segment_rakam_pageview_sessions',
-    sourceColumn: 'anonymous_id',
-    targetColumn: 'anonymous_id',
+    source: 'anonymous_id',
+    target: 'anonymous_id',
   } } else {},
   dimensions: commonDimensions + std.extVar('pages_campaign_columns') + {
     page_url_host: {

@@ -8,8 +8,8 @@
       relationType: 'manyToOne',
       joinType: 'leftJoin',
       modelName: 'adwords_campaigns',
-      sourceColumn: 'campaign_id',
-      targetColumn: 'id',
+      source: 'campaign_id',
+      target: 'id',
     },
   },
   dimensions: {

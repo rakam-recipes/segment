@@ -22,7 +22,7 @@ local attrs = std.extVar('attributions');
                h: 1,
                w: 1,
                component: 'r-number',
-               type: 1,
+               type: 'segmentation',
                reportOptions: {
                  modelName: 'segment_users',
                  dimensions: [],
@@ -79,7 +79,7 @@ local attrs = std.extVar('attributions');
                h: 1,
                w: 2,
                component: 'r-number',
-               type: 1,
+               type: 'segmentation',
                reportOptions: {
                  modelName: 'segment_users',
                  dimensions: [],
@@ -112,7 +112,7 @@ local attrs = std.extVar('attributions');
                h: 1,
                w: 1,
                component: 'r-number',
-               type: 1,
+               type: 'segmentation',
                reportOptions: {
                  modelName: 'segment_users',
                  dimensions: [],
@@ -167,7 +167,7 @@ local attrs = std.extVar('attributions');
              h: 1,
              w: 2,
              component: 'r-segmentation-chart',
-             type: 1,
+             type: 'segmentation',
              reportOptions: {
                modelName: 'segment_users',
                dimensions: [
@@ -208,7 +208,7 @@ local attrs = std.extVar('attributions');
              h: 2,
              w: 4,
              component: 'r-segmentation-chart',
-             type: 1,
+             type: 'segmentation',
              reportOptions: {
                modelName: 'identifies',
                dimensions: [

@@ -20,7 +20,7 @@
       h: 1,
       w: 2,
       component: 'r-number',
-      type: 1,
+      type: 'segmentation',
       reportOptions: {
         modelName: 'facebook_insights',
         dimensions: [],
@@ -54,7 +54,7 @@
       h: 1,
       w: 2,
       component: 'r-number',
-      type: 1,
+      type: 'segmentation',
       reportOptions: {
         modelName: 'facebook_insights',
         dimensions: [],
@@ -88,7 +88,7 @@
       h: 1,
       w: 6,
       component: 'r-segmentation-chart',
-      type: 1,
+      type: 'segmentation',
       reportOptions: {
         modelName: 'facebook_insights',
         dimensions: [
@@ -166,7 +166,7 @@
       h: 1,
       w: 2,
       component: 'r-number',
-      type: 1,
+      type: 'segmentation',
       reportOptions: {
         modelName: 'facebook_insights',
         dimensions: [],
@@ -200,7 +200,7 @@
       h: 1,
       w: 2,
       component: 'r-number',
-      type: 1,
+      type: 'segmentation',
       reportOptions: {
         modelName: 'facebook_insights',
         dimensions: [],
@@ -234,7 +234,7 @@
       h: 1,
       w: 4,
       component: 'r-number',
-      type: 1,
+      type: 'segmentation',
       reportOptions: {
         modelName: 'facebook_insights',
         dimensions: [],
@@ -268,7 +268,7 @@
       h: 1,
       w: 2,
       component: 'r-number',
-      type: 1,
+      type: 'segmentation',
       reportOptions: {
         modelName: 'facebook_insights',
         dimensions: [],
@@ -293,7 +293,7 @@
       h: 2,
       w: 2,
       component: 'r-segmentation-chart',
-      type: 1,
+      type: 'segmentation',
       reportOptions: {
         modelName: 'facebook_insights',
         dimensions: [

@@ -21,7 +21,7 @@
       h: 1,
       w: 2,
       component: 'r-number',
-      type: 1,
+      type: 'segmentation',
       reportOptions: {
         modelName: 'adwords_ad_performance_reports',
         dimensions: [],
@@ -55,7 +55,7 @@
       h: 1,
       w: 2,
       component: 'r-number',
-      type: 1,
+      type: 'segmentation',
       reportOptions: {
         modelName: 'adwords_ad_performance_reports',
         dimensions: [],
@@ -80,7 +80,7 @@
       h: 1,
       w: 2,
       component: 'r-number',
-      type: 1,
+      type: 'segmentation',
       reportOptions: {
         modelName: 'adwords_ad_performance_reports',
         dimensions: [],
@@ -105,7 +105,7 @@
       h: 1,
       w: 1,
       component: 'r-number',
-      type: 1,
+      type: 'segmentation',
       reportOptions: {
         modelName: 'adwords_ad_performance_reports',
         dimensions: [],
@@ -130,7 +130,7 @@
       h: 2,
       w: 2,
       component: 'r-segmentation-chart',
-      type: 1,
+      type: 'segmentation',
       reportOptions: {
         modelName: 'adwords_ad_performance_reports',
         dimensions: [],
@@ -174,7 +174,7 @@
       h: 1,
       w: 1,
       component: 'r-number',
-      type: 1,
+      type: 'segmentation',
       reportOptions: {
         modelName: 'adwords_ad_performance_reports',
         dimensions: [],
@@ -208,7 +208,7 @@
       h: 1,
       w: 2,
       component: 'r-number',
-      type: 1,
+      type: 'segmentation',
       reportOptions: {
         modelName: 'adwords_ad_performance_reports',
         dimensions: [],
@@ -242,7 +242,7 @@
       h: 2,
       w: 4,
       component: 'r-segmentation-chart',
-      type: 1,
+      type: 'segmentation',
       reportOptions: {
         modelName: 'adwords_ad_performance_reports',
         dimensions: [
@@ -290,7 +290,7 @@
       h: 1,
       w: 2,
       component: 'r-number',
-      type: 1,
+      type: 'segmentation',
       reportOptions: {
         modelName: 'adwords_ad_performance_reports',
         dimensions: [

@@ -10,7 +10,7 @@ local context_columns = std.extVar('track_context');
       value: {
         name: 'eventTimestamp',
       },
-      defaultValue: 'P5Y',
+      defaultValue: 'P2W',
       isRequired: true,
     },
   ],
@@ -23,7 +23,7 @@ local context_columns = std.extVar('track_context');
       h: 2,
       w: 6,
       component: 'r-segmentation-table',
-      type: 1,
+      type: 'segmentation',
       reportOptions: {
         modelName: 'segment_events',
         dimensions: [
@@ -64,7 +64,7 @@ local context_columns = std.extVar('track_context');
       h: 2,
       w: 3,
       component: 'r-segmentation-chart',
-      type: 1,
+      type: 'segmentation',
       reportOptions: {
         modelName: 'segment_events',
         dimensions: [
@@ -106,7 +106,7 @@ local context_columns = std.extVar('track_context');
       h: 2,
       w: 3,
       component: 'r-segmentation-chart',
-      type: 1,
+      type: 'segmentation',
       reportOptions: {
         modelName: 'segment_events',
         dimensions: [
@@ -148,7 +148,7 @@ local context_columns = std.extVar('track_context');
       h: 1,
       w: 2,
       component: 'r-number',
-      type: 1,
+      type: 'segmentation',
       reportOptions: {
         modelName: 'segment_events',
         dimensions: [],
@@ -183,7 +183,7 @@ local context_columns = std.extVar('track_context');
       h: 1,
       w: 2,
       component: 'r-number',
-      type: 1,
+      type: 'segmentation',
       reportOptions: {
         modelName: 'segment_events',
         dimensions: [],
@@ -218,7 +218,7 @@ local context_columns = std.extVar('track_context');
       h: 1,
       w: 2,
       component: 'r-number',
-      type: 1,
+      type: 'segmentation',
       reportOptions: {
         modelName: 'segment_events',
         dimensions: [],
