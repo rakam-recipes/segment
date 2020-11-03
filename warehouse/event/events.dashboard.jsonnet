@@ -25,11 +25,11 @@ local context_columns = std.extVar('track_context');
       component: 'r-segmentation-table',
       type: 'segmentation',
       reportOptions: {
-        modelName: 'segment_events',
+        model: 'segment_events',
         dimensions: [
           {
             name: 'event_text',
-            modelName: 'segment_events',
+            model: 'segment_events',
             relationName: null,
             postOperation: null,
           },
@@ -37,7 +37,7 @@ local context_columns = std.extVar('track_context');
         measures: [
           {
             name: 'context_app_version',
-            modelName: 'segment_events',
+            model: 'segment_events',
             relationName: null,
           },
         ],
@@ -66,11 +66,11 @@ local context_columns = std.extVar('track_context');
       component: 'r-segmentation-chart',
       type: 'segmentation',
       reportOptions: {
-        modelName: 'segment_events',
+        model: 'segment_events',
         dimensions: [
           {
             name: 'event_text',
-            modelName: 'segment_events',
+            model: 'segment_events',
             relationName: null,
             postOperation: null,
           },
@@ -78,7 +78,7 @@ local context_columns = std.extVar('track_context');
         measures: [
           {
             name: 'total_events',
-            modelName: 'segment_events',
+            model: 'segment_events',
             relationName: null,
           },
         ],
@@ -108,11 +108,11 @@ local context_columns = std.extVar('track_context');
       component: 'r-segmentation-chart',
       type: 'segmentation',
       reportOptions: {
-        modelName: 'segment_events',
+        model: 'segment_events',
         dimensions: [
           {
             name: 'event_text',
-            modelName: 'segment_events',
+            model: 'segment_events',
             relationName: null,
             postOperation: null,
           },
@@ -120,7 +120,7 @@ local context_columns = std.extVar('track_context');
         measures: [
           {
             name: 'unique_users',
-            modelName: 'segment_events',
+            model: 'segment_events',
             relationName: null,
           },
         ],
@@ -150,12 +150,12 @@ local context_columns = std.extVar('track_context');
       component: 'r-number',
       type: 'segmentation',
       reportOptions: {
-        modelName: 'segment_events',
+        model: 'segment_events',
         dimensions: [],
         measures: [
           {
             name: 'total_events',
-            modelName: 'segment_events',
+            model: 'segment_events',
             relationName: null,
           },
         ],
@@ -185,12 +185,12 @@ local context_columns = std.extVar('track_context');
       component: 'r-number',
       type: 'segmentation',
       reportOptions: {
-        modelName: 'segment_events',
+        model: 'segment_events',
         dimensions: [],
         measures: [
           {
             name: 'unique_users',
-            modelName: 'segment_events',
+            model: 'segment_events',
             relationName: null,
           },
         ],
@@ -220,12 +220,12 @@ local context_columns = std.extVar('track_context');
       component: 'r-number',
       type: 'segmentation',
       reportOptions: {
-        modelName: 'segment_events',
+        model: 'segment_events',
         dimensions: [],
         measures: [
           {
             name: 'unique_devices',
-            modelName: 'segment_events',
+            model: 'segment_events',
             relationName: null,
           },
         ],

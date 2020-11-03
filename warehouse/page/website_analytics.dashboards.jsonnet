@@ -22,27 +22,27 @@ if std.extVar('pages_target') != null then [{
       component: 'r-number',
       type: 'segmentation',
       reportOptions: {
-        modelName: 'segment_rakam_pageview_sessions',
+        model: 'segment_rakam_pageview_sessions',
         dimensions: null,
         measures: [
           {
             name: 'users',
-            modelName: 'segment_rakam_pageview_sessions',
+            model: 'segment_rakam_pageview_sessions',
             relationName: null,
           },
           {
             name: 'new_sessions',
-            modelName: 'segment_rakam_pageview_sessions',
+            model: 'segment_rakam_pageview_sessions',
             relationName: null,
           },
           {
             name: 'returning_sessions',
-            modelName: 'segment_rakam_pageview_sessions',
+            model: 'segment_rakam_pageview_sessions',
             relationName: null,
           },
           {
             name: 'sessions',
-            modelName: 'segment_rakam_pageview_sessions',
+            model: 'segment_rakam_pageview_sessions',
             relationName: null,
           },
         ],
@@ -71,11 +71,11 @@ if std.extVar('pages_target') != null then [{
       component: 'r-chart',
       type: 'segmentation',
       reportOptions: {
-        modelName: 'segment_pages',
+        model: 'segment_pages',
         dimensions: [
           {
             name: 'timestamp',
-            modelName: 'segment_pages',
+            model: 'segment_pages',
             relationName: null,
             postOperation: {
               type: 'timestamp',
@@ -87,7 +87,7 @@ if std.extVar('pages_target') != null then [{
         measures: [
           {
             name: 'pageviews',
-            modelName: 'segment_pages',
+            model: 'segment_pages',
             relationName: null,
           },
         ],
@@ -116,12 +116,12 @@ if std.extVar('pages_target') != null then [{
       component: 'r-number',
       type: 'segmentation',
       reportOptions: {
-        modelName: 'segment_pages',
+        model: 'segment_pages',
         dimensions: null,
         measures: [
           {
             name: 'pageviews',
-            modelName: 'segment_pages',
+            model: 'segment_pages',
             relationName: null,
           },
         ],
@@ -150,27 +150,27 @@ if std.extVar('pages_target') != null then [{
       component: 'r-number',
       type: 'segmentation',
       reportOptions: {
-        modelName: 'segment_rakam_pageview_sessions',
+        model: 'segment_rakam_pageview_sessions',
         dimensions: null,
         measures: [
           {
             name: 'average_session_count_per_user',
-            modelName: 'segment_rakam_pageview_sessions',
+            model: 'segment_rakam_pageview_sessions',
             relationName: null,
           },
           {
             name: 'pages_per_session',
-            modelName: 'segment_rakam_pageview_sessions',
+            model: 'segment_rakam_pageview_sessions',
             relationName: null,
           },
           {
             name: 'average_duration',
-            modelName: 'segment_rakam_pageview_sessions',
+            model: 'segment_rakam_pageview_sessions',
             relationName: null,
           },
           {
             name: 'bounce_rate',
-            modelName: 'segment_rakam_pageview_sessions',
+            model: 'segment_rakam_pageview_sessions',
             relationName: null,
           },
         ],

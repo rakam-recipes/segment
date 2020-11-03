@@ -31,11 +31,11 @@
       component: 'r-segmentation-chart',
       type: 'segmentation',
       reportOptions: {
-        modelName: 'segment_events',
+        model: 'segment_events',
         dimensions: [
           {
             name: 'received_at',
-            modelName: 'segment_events',
+            model: 'segment_events',
             relationName: null,
             postOperation: {
               type: 'timestamp',
@@ -46,7 +46,7 @@
         measures: [
           {
             name: 'total_events',
-            modelName: 'segment_events',
+            model: 'segment_events',
             relationName: null,
           },
         ],
@@ -73,10 +73,10 @@
       component: 'r-number',
       type: 'segmentation',
       reportOptions: {
-        modelName: 'segment_users',
+        model: 'segment_users',
         dimensions: std.map(function(dimension) {
           name: dimension,
-          modelName: 'segment_users',
+          model: 'segment_users',
           relationName: null,
           postOperation: null,
         }, std.objectFields(std.extVar('attributions'))),
@@ -96,11 +96,11 @@
       component: 'r-segmentation-chart',
       type: 'segmentation',
       reportOptions: {
-        modelName: 'segment_events',
+        model: 'segment_events',
         dimensions: [
           {
             name: 'event_text',
-            modelName: 'segment_events',
+            model: 'segment_events',
             relationName: null,
             postOperation: null,
             pivot: null,
@@ -109,7 +109,7 @@
         measures: [
           {
             name: 'total_events',
-            modelName: 'segment_events',
+            model: 'segment_events',
             relationName: null,
           },
         ],

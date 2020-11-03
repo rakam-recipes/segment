@@ -25,14 +25,14 @@ if std.extVar('pages_target') != null then {
     user: {
       relationType: 'manyToOne',
       joinType: 'leftJoin',
-      modelName: 'segment_users',
+      model: 'segment_users',
       source: 'user_id',
       target: 'id',
     },
   } + if std.extVar('session_model_target') != null then { session: {
     relationType: 'oneToOne',
     joinType: 'leftJoin',
-    modelName: 'segment_rakam_pageview_sessions',
+    model: 'segment_rakam_pageview_sessions',
     source: 'anonymous_id',
     target: 'anonymous_id',
   } } else {},

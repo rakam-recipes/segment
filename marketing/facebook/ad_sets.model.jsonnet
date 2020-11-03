@@ -10,14 +10,14 @@
     facebook_campaigns: {
       relationType: 'manyToOne',
       joinType: 'leftJoin',
-      modelName: 'facebook_campaigns',
+      model: 'facebook_campaigns',
       source: 'campaign_id',
       target: 'id',
     },
     facebook_ad_accounts: {
       relationType: 'manyToOne',
       joinType: 'leftJoin',
-      modelName: 'facebook_ad_accounts',
+      model: 'facebook_ad_accounts',
       source: 'account_id',
       target: 'id',
     },

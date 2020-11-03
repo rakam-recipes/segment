@@ -8,14 +8,14 @@
     adwords_campaigns: {
       relationType: 'manyToOne',
       joinType: 'leftJoin',
-      modelName: 'adwords_campaigns',
+      model: 'adwords_campaigns',
       source: 'campaign_id',
       target: 'id',
     },
     adwords_ad_groups: {
       relationType: 'manyToOne',
       joinType: 'leftJoin',
-      modelName: 'adwords_ad_groups',
+      model: 'adwords_ad_groups',
       source: 'ad_group_id',
       target: 'id',
     },

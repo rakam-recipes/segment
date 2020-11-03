@@ -23,12 +23,12 @@
       component: 'r-number',
       type: 'segmentation',
       reportOptions: {
-        modelName: 'adwords_ad_performance_reports',
+        model: 'adwords_ad_performance_reports',
         dimensions: [],
         measures: [
           {
             name: 'cost',
-            modelName: 'adwords_ad_performance_reports',
+            model: 'adwords_ad_performance_reports',
             relationName: null,
           },
         ],
@@ -57,12 +57,12 @@
       component: 'r-number',
       type: 'segmentation',
       reportOptions: {
-        modelName: 'adwords_ad_performance_reports',
+        model: 'adwords_ad_performance_reports',
         dimensions: [],
         measures: [
           {
             name: 'clicks',
-            modelName: 'adwords_ad_performance_reports',
+            model: 'adwords_ad_performance_reports',
             relationName: null,
           },
         ],
@@ -82,12 +82,12 @@
       component: 'r-number',
       type: 'segmentation',
       reportOptions: {
-        modelName: 'adwords_ad_performance_reports',
+        model: 'adwords_ad_performance_reports',
         dimensions: [],
         measures: [
           {
             name: 'interactions',
-            modelName: 'adwords_ad_performance_reports',
+            model: 'adwords_ad_performance_reports',
             relationName: null,
           },
         ],
@@ -107,12 +107,12 @@
       component: 'r-number',
       type: 'segmentation',
       reportOptions: {
-        modelName: 'adwords_ad_performance_reports',
+        model: 'adwords_ad_performance_reports',
         dimensions: [],
         measures: [
           {
             name: 'average_time_on_site',
-            modelName: 'adwords_ad_performance_reports',
+            model: 'adwords_ad_performance_reports',
             relationName: null,
           },
         ],
@@ -132,22 +132,22 @@
       component: 'r-segmentation-chart',
       type: 'segmentation',
       reportOptions: {
-        modelName: 'adwords_ad_performance_reports',
+        model: 'adwords_ad_performance_reports',
         dimensions: [],
         measures: [
           {
             name: 'impressions',
-            modelName: 'adwords_ad_performance_reports',
+            model: 'adwords_ad_performance_reports',
             relationName: null,
           },
           {
             name: 'interactions',
-            modelName: 'adwords_ad_performance_reports',
+            model: 'adwords_ad_performance_reports',
             relationName: null,
           },
           {
             name: 'conversions',
-            modelName: 'adwords_ad_performance_reports',
+            model: 'adwords_ad_performance_reports',
             relationName: null,
           },
         ],
@@ -176,12 +176,12 @@
       component: 'r-number',
       type: 'segmentation',
       reportOptions: {
-        modelName: 'adwords_ad_performance_reports',
+        model: 'adwords_ad_performance_reports',
         dimensions: [],
         measures: [
           {
             name: 'average_bounce_rate',
-            modelName: 'adwords_ad_performance_reports',
+            model: 'adwords_ad_performance_reports',
             relationName: null,
           },
         ],
@@ -210,12 +210,12 @@
       component: 'r-number',
       type: 'segmentation',
       reportOptions: {
-        modelName: 'adwords_ad_performance_reports',
+        model: 'adwords_ad_performance_reports',
         dimensions: [],
         measures: [
           {
             name: 'engagements',
-            modelName: 'adwords_ad_performance_reports',
+            model: 'adwords_ad_performance_reports',
             relationName: null,
           },
         ],
@@ -244,11 +244,11 @@
       component: 'r-segmentation-chart',
       type: 'segmentation',
       reportOptions: {
-        modelName: 'adwords_ad_performance_reports',
+        model: 'adwords_ad_performance_reports',
         dimensions: [
           {
             name: 'campaign_name',
-            modelName: 'adwords_ad_performance_reports',
+            model: 'adwords_ad_performance_reports',
             relationName: null,
             postOperation: null,
           },
@@ -256,12 +256,12 @@
         measures: [
           {
             name: 'cost',
-            modelName: 'adwords_ad_performance_reports',
+            model: 'adwords_ad_performance_reports',
             relationName: null,
           },
           {
             name: 'conversions',
-            modelName: 'adwords_ad_performance_reports',
+            model: 'adwords_ad_performance_reports',
             relationName: null,
           },
         ],
@@ -292,11 +292,11 @@
       component: 'r-number',
       type: 'segmentation',
       reportOptions: {
-        modelName: 'adwords_ad_performance_reports',
+        model: 'adwords_ad_performance_reports',
         dimensions: [
           {
             name: 'is_active',
-            modelName: 'adwords_ads',
+            model: 'adwords_ads',
             relationName: 'adwords_ads',
             postOperation: null,
           },
@@ -304,7 +304,7 @@
         measures: [
           {
             name: 'total_ads',
-            modelName: 'adwords_ads',
+            model: 'adwords_ads',
             relationName: 'adwords_ads',
           },
         ],

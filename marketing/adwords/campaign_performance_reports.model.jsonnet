@@ -11,14 +11,14 @@ local ad_performance_reports = import './ad_performance_reports.model.jsonnet';
     adwords_campaigns: {
       relationType: 'manyToOne',
       joinType: 'leftJoin',
-      modelName: 'adwords_campaigns',
+      model: 'adwords_campaigns',
       source: 'campaign_id',
       target: 'id',
     },
     base_adwords_campaign: {
       relationType: 'manyToOne',
       joinType: 'leftJoin',
-      modelName: 'adwords_campaigns',
+      model: 'adwords_campaigns',
       source: 'base_campaign_id',
       target: 'id',
     },

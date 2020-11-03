@@ -24,12 +24,12 @@ local attrs = std.extVar('attributions');
                component: 'r-number',
                type: 'segmentation',
                reportOptions: {
-                 modelName: 'segment_users',
+                 model: 'segment_users',
                  dimensions: [],
                  measures: [
                    {
                      name: 'total_users',
-                     modelName: 'segment_users',
+                     model: 'segment_users',
                      relationName: null,
                    },
                  ],
@@ -52,7 +52,7 @@ local attrs = std.extVar('attributions');
                        metricType: 'dimension',
                        metricValue: {
                          name: 'last_update',
-                         modelName: 'segment_users',
+                         model: 'segment_users',
                          relationName: null,
                          postOperation: {
                            type: 'timestamp',
@@ -81,12 +81,12 @@ local attrs = std.extVar('attributions');
                component: 'r-number',
                type: 'segmentation',
                reportOptions: {
-                 modelName: 'segment_users',
+                 model: 'segment_users',
                  dimensions: [],
                  measures: [
                    {
                      name: 'total_users',
-                     modelName: 'segment_users',
+                     model: 'segment_users',
                      relationName: null,
                    },
                  ],
@@ -114,12 +114,12 @@ local attrs = std.extVar('attributions');
                component: 'r-number',
                type: 'segmentation',
                reportOptions: {
-                 modelName: 'segment_users',
+                 model: 'segment_users',
                  dimensions: [],
                  measures: [
                    {
                      name: 'total_users',
-                     modelName: 'segment_users',
+                     model: 'segment_users',
                      relationName: null,
                    },
                  ],
@@ -142,7 +142,7 @@ local attrs = std.extVar('attributions');
                        metricType: 'dimension',
                        metricValue: {
                          name: 'last_update',
-                         modelName: 'segment_users',
+                         model: 'segment_users',
                          relationName: null,
                          postOperation: {
                            type: 'timestamp',
@@ -169,11 +169,11 @@ local attrs = std.extVar('attributions');
              component: 'r-segmentation-chart',
              type: 'segmentation',
              reportOptions: {
-               modelName: 'segment_users',
+               model: 'segment_users',
                dimensions: [
                  {
                    name: attr,
-                   modelName: 'segment_users',
+                   model: 'segment_users',
                    relationName: null,
                    postOperation: null,
                  },
@@ -181,7 +181,7 @@ local attrs = std.extVar('attributions');
                measures: [
                  {
                    name: 'total_users',
-                   modelName: 'segment_users',
+                   model: 'segment_users',
                    relationName: null,
                  },
                ],
@@ -210,11 +210,11 @@ local attrs = std.extVar('attributions');
              component: 'r-segmentation-chart',
              type: 'segmentation',
              reportOptions: {
-               modelName: 'identifies',
+               model: 'identifies',
                dimensions: [
                  {
                    name: 'received_at',
-                   modelName: 'identifies',
+                   model: 'identifies',
                    relationName: null,
                    postOperation: {
                      type: 'timestamp',
@@ -225,7 +225,7 @@ local attrs = std.extVar('attributions');
                measures: [
                  {
                    name: 'total_identify',
-                   modelName: 'identifies',
+                   model: 'identifies',
                    relationName: null,
                  },
                ],

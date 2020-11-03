@@ -13,11 +13,11 @@ if std.extVar('screens_target') != null then [
         component: 'r-segmentation-chart',
         type: 'segmentation',
         reportOptions: {
-          modelName: 'screens',
+          model: 'screens',
           dimensions: [
             {
               name: 'context_device_type',
-              modelName: 'screens',
+              model: 'screens',
               relationName: null,
               postOperation: null,
               pivot: null,
@@ -26,7 +26,7 @@ if std.extVar('screens_target') != null then [
           measures: [
             {
               name: 'total_events',
-              modelName: 'screens',
+              model: 'screens',
               relationName: null,
             },
           ],
@@ -55,11 +55,11 @@ if std.extVar('screens_target') != null then [
         component: 'r-segmentation-chart',
         type: 'segmentation',
         reportOptions: {
-          modelName: 'screens',
+          model: 'screens',
           dimensions: [
             {
               name: 'context_app_name',
-              modelName: 'screens',
+              model: 'screens',
               relationName: null,
               postOperation: null,
             },
@@ -67,7 +67,7 @@ if std.extVar('screens_target') != null then [
           measures: [
             {
               name: 'total_events',
-              modelName: 'screens',
+              model: 'screens',
               relationName: null,
             },
           ],
@@ -97,12 +97,12 @@ if std.extVar('screens_target') != null then [
         component: 'r-number',
         type: 'segmentation',
         reportOptions: {
-          modelName: 'screens',
+          model: 'screens',
           dimensions: [],
           measures: [
             {
               name: 'unique_users',
-              modelName: 'screens',
+              model: 'screens',
               relationName: null,
             },
           ],
@@ -122,12 +122,12 @@ if std.extVar('screens_target') != null then [
         component: 'r-number',
         type: 'segmentation',
         reportOptions: {
-          modelName: 'screens',
+          model: 'screens',
           dimensions: [],
           measures: [
             {
               name: 'unique_devices',
-              modelName: 'screens',
+              model: 'screens',
               relationName: null,
             },
           ],
@@ -147,11 +147,11 @@ if std.extVar('screens_target') != null then [
         component: 'r-segmentation-chart',
         type: 'segmentation',
         reportOptions: {
-          modelName: 'screens',
+          model: 'screens',
           dimensions: [
             {
               name: 'context_os_name',
-              modelName: 'screens',
+              model: 'screens',
               relationName: null,
               postOperation: null,
             },
@@ -159,7 +159,7 @@ if std.extVar('screens_target') != null then [
           measures: [
             {
               name: 'unique_users',
-              modelName: 'screens',
+              model: 'screens',
               relationName: null,
             },
           ],
@@ -188,11 +188,11 @@ if std.extVar('screens_target') != null then [
         component: 'r-segmentation-chart',
         type: 'segmentation',
         reportOptions: {
-          modelName: 'screens',
+          model: 'screens',
           dimensions: [
             {
               name: 'context_device_manufacturer',
-              modelName: 'screens',
+              model: 'screens',
               relationName: null,
               postOperation: null,
               pivot: null,
@@ -201,7 +201,7 @@ if std.extVar('screens_target') != null then [
           measures: [
             {
               name: 'unique_users',
-              modelName: 'screens',
+              model: 'screens',
               relationName: null,
             },
           ],
@@ -231,11 +231,11 @@ if std.extVar('screens_target') != null then [
         component: 'r-segmentation-chart',
         type: 'segmentation',
         reportOptions: {
-          modelName: 'screens',
+          model: 'screens',
           dimensions: [
             {
               name: 'context_network_carrier',
-              modelName: 'screens',
+              model: 'screens',
               relationName: null,
               postOperation: null,
               pivot: null,
@@ -244,7 +244,7 @@ if std.extVar('screens_target') != null then [
           measures: [
             {
               name: 'unique_users',
-              modelName: 'screens',
+              model: 'screens',
               relationName: null,
             },
           ],
@@ -274,11 +274,11 @@ if std.extVar('screens_target') != null then [
         component: 'r-segmentation-chart',
         type: 'segmentation',
         reportOptions: {
-          modelName: 'screens',
+          model: 'screens',
           dimensions: [
             {
               name: 'context_device_type',
-              modelName: 'screens',
+              model: 'screens',
               relationName: null,
               postOperation: null,
               pivot: null,
@@ -287,7 +287,7 @@ if std.extVar('screens_target') != null then [
           measures: [
             {
               name: 'unique_users',
-              modelName: 'screens',
+              model: 'screens',
               relationName: null,
             },
           ],

@@ -7,7 +7,7 @@
     adwords_campaigns: {
       relationType: 'manyToOne',
       joinType: 'leftJoin',
-      modelName: 'adwords_campaigns',
+      model: 'adwords_campaigns',
       source: 'campaign_id',
       target: 'id',
     },

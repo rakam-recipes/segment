@@ -22,12 +22,12 @@
       component: 'r-number',
       type: 'segmentation',
       reportOptions: {
-        modelName: 'facebook_insights',
+        model: 'facebook_insights',
         dimensions: [],
         measures: [
           {
             name: 'frequency',
-            modelName: 'facebook_insights',
+            model: 'facebook_insights',
             relationName: null,
           },
         ],
@@ -56,12 +56,12 @@
       component: 'r-number',
       type: 'segmentation',
       reportOptions: {
-        modelName: 'facebook_insights',
+        model: 'facebook_insights',
         dimensions: [],
         measures: [
           {
             name: 'impressions',
-            modelName: 'facebook_insights',
+            model: 'facebook_insights',
             relationName: null,
           },
         ],
@@ -90,11 +90,11 @@
       component: 'r-segmentation-chart',
       type: 'segmentation',
       reportOptions: {
-        modelName: 'facebook_insights',
+        model: 'facebook_insights',
         dimensions: [
           {
             name: 'name',
-            modelName: 'facebook_campaigns',
+            model: 'facebook_campaigns',
             relationName: 'facebook_campaigns',
             postOperation: null,
             pivot: null,
@@ -103,22 +103,22 @@
         measures: [
           {
             name: 'total_spend',
-            modelName: 'facebook_insights',
+            model: 'facebook_insights',
             relationName: null,
           },
           {
             name: 'clicks',
-            modelName: 'facebook_insights',
+            model: 'facebook_insights',
             relationName: null,
           },
           {
             name: 'impressions',
-            modelName: 'facebook_insights',
+            model: 'facebook_insights',
             relationName: null,
           },
           {
             name: 'click_through_rate',
-            modelName: 'facebook_insights',
+            model: 'facebook_insights',
             relationName: null,
           },
         ],
@@ -141,7 +141,7 @@
               metricType: 'dimension',
               metricValue: {
                 name: 'is_active',
-                modelName: 'facebook_ads',
+                model: 'facebook_ads',
                 relationName: 'facebook_ads',
                 postOperation: null,
                 pivot: null,
@@ -168,12 +168,12 @@
       component: 'r-number',
       type: 'segmentation',
       reportOptions: {
-        modelName: 'facebook_insights',
+        model: 'facebook_insights',
         dimensions: [],
         measures: [
           {
             name: 'total_spend',
-            modelName: 'facebook_insights',
+            model: 'facebook_insights',
             relationName: null,
           },
         ],
@@ -202,12 +202,12 @@
       component: 'r-number',
       type: 'segmentation',
       reportOptions: {
-        modelName: 'facebook_insights',
+        model: 'facebook_insights',
         dimensions: [],
         measures: [
           {
             name: 'clicks',
-            modelName: 'facebook_insights',
+            model: 'facebook_insights',
             relationName: null,
           },
         ],
@@ -236,12 +236,12 @@
       component: 'r-number',
       type: 'segmentation',
       reportOptions: {
-        modelName: 'facebook_insights',
+        model: 'facebook_insights',
         dimensions: [],
         measures: [
           {
             name: 'reach',
-            modelName: 'facebook_insights',
+            model: 'facebook_insights',
             relationName: null,
           },
         ],
@@ -270,12 +270,12 @@
       component: 'r-number',
       type: 'segmentation',
       reportOptions: {
-        modelName: 'facebook_insights',
+        model: 'facebook_insights',
         dimensions: [],
         measures: [
           {
             name: 'click_through_rate',
-            modelName: 'facebook_insights',
+            model: 'facebook_insights',
             relationName: null,
           },
         ],
@@ -295,11 +295,11 @@
       component: 'r-segmentation-chart',
       type: 'segmentation',
       reportOptions: {
-        modelName: 'facebook_insights',
+        model: 'facebook_insights',
         dimensions: [
           {
             name: 'buying_type',
-            modelName: 'facebook_campaigns',
+            model: 'facebook_campaigns',
             relationName: 'facebook_campaigns',
             postOperation: null,
           },
@@ -307,7 +307,7 @@
         measures: [
           {
             name: 'impressions',
-            modelName: 'facebook_insights',
+            model: 'facebook_insights',
             relationName: null,
           },
         ],

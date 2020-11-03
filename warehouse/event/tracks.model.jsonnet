@@ -20,7 +20,7 @@ if std.extVar('tracks_target') == null then null else {
     user: {
       relationType: 'manyToOne',
       joinType: 'leftJoin',
-      modelName: 'segment_users',
+      model: 'segment_users',
       source: 'user_id',
       target: 'id',
     },

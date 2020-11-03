@@ -7,7 +7,7 @@
     adwords_ad_groups: {
       relationType: 'manyToOne',
       joinType: 'leftJoin',
-      modelName: 'adwords_ad_groups',
+      model: 'adwords_ad_groups',
       source: 'ad_group_id',
       target: 'id',
     },
