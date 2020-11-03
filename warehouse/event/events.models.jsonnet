@@ -15,7 +15,7 @@ if event_types == null then [] else
     },
     relations: {
       user: {
-        relation: 'manyToOne',
+        relationship: 'manyToOne',
         type: 'leftJoin',
         model: 'segment_users',
         source: 'user_id',

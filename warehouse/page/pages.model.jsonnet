@@ -28,7 +28,7 @@ if std.extVar('pages_target') != null then {
       target: 'id',
     },
   } + if std.extVar('session_model_target') != null then { session: {
-    relation: 'oneToOne',
+    relationship: 'oneToOne',
     type: 'leftJoin',
     model: 'segment_rakam_pageview_sessions',
     source: 'anonymous_id',
