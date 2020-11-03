@@ -107,7 +107,7 @@ local attrs = std.extVar('attributions');
                  limit: 1000,
                  filters: [
                    {
-                     dimension: 'dimension',
+                     dimension: 'last_update',
                      operator: 'between',
                      value: 'P30D',
                    },
