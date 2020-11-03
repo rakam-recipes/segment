@@ -84,11 +84,7 @@ local attrs = std.extVar('attributions');
                  model: 'segment_users',
                  dimensions: [],
                  measures: [
-                   {
-                     name: 'total_users',
-                     model: 'segment_users',
-                     relationName: null,
-                   },
+                   'total_users',
                  ],
                  reportOptions: {
                    chartOptions: {
@@ -214,20 +210,11 @@ local attrs = std.extVar('attributions');
                dimensions: [
                  {
                    name: 'received_at',
-                   model: 'identifies',
-                   relationName: null,
-                   postOperation: {
-                     type: 'timestamp',
-                     value: 'day',
-                   },
+                   timeframe: 'day',
                  },
                ],
                measures: [
-                 {
-                   name: 'total_identify',
-                   model: 'identifies',
-                   relationName: null,
-                 },
+                 'total_identify',
                ],
                reportOptions: {
                  chartOptions: {
