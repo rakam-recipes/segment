@@ -35,20 +35,11 @@
         dimensions: [
           {
             name: 'received_at',
-            model: 'segment_events',
-            relationName: null,
-            postOperation: {
-              type: 'timestamp',
-              value: 'day',
-            },
+            timeframe: 'day',
           },
         ],
         measures: [
-          {
-            name: 'total_events',
-            model: 'segment_events',
-            relationName: null,
-          },
+          'total_events',
         ],
         reportOptions: {
           chartOptions: {
@@ -74,15 +65,8 @@
       type: 'segmentation',
       reportOptions: {
         model: 'segment_users',
-        dimensions: std.map(function(dimension) {
-          name: dimension,
-          model: 'segment_users',
-          relationName: null,
-          postOperation: null,
-        }, std.objectFields(std.extVar('attributions'))),
+        dimensions: std.objectFields(std.extVar('attributions')),
         measures: [],
-        reportOptions: null,
-
         limit: 1000,
       },
     },
@@ -98,23 +82,12 @@
       reportOptions: {
         model: 'segment_events',
         dimensions: [
-          {
-            name: 'event_text',
-            model: 'segment_events',
-            relationName: null,
-            postOperation: null,
-            pivot: null,
-          },
+          'event_text',
         ],
         measures: [
-          {
-            name: 'total_events',
-            model: 'segment_events',
-            relationName: null,
-          },
+          'total_events',
         ],
         reportOptions: { chartOptions: { columnOptions: [], type: 'bar', orientation: 'h' }, tableOptions: { columnOptions: [] } },
-
         limit: 1000,
       },
     },
