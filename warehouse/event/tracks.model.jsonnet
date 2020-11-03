@@ -17,12 +17,11 @@ if std.extVar('tracks_target') == null then null else {
     sessionId: null,
   },
   relations: {
-    user: {
+    segment_users: {
       relationship: 'manyToOne',
       type: 'leftJoin',
-      model: 'segment_users',
       source: 'user_id',
-      target: 'id',
+      target: 'user_id',
     },
   },
   measures: {
