@@ -123,12 +123,7 @@ local attrs = std.extVar('attributions');
              reportOptions: {
                model: 'segment_users',
                dimensions: [
-                 {
-                   name: attr,
-                   model: 'segment_users',
-                   relationName: null,
-                   postOperation: null,
-                 },
+                 attr,
                ],
                measures: [
                  'total_users',
