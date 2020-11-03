@@ -27,11 +27,7 @@ local attrs = std.extVar('attributions');
                  model: 'segment_users',
                  dimensions: [],
                  measures: [
-                   {
-                     name: 'total_users',
-                     model: 'segment_users',
-                     relationName: null,
-                   },
+                   'total_users',
                  ],
                  reportOptions: {
                    chartOptions: {
@@ -47,27 +43,9 @@ local attrs = std.extVar('attributions');
                  limit: 1000,
                  filters: [
                    {
-                     type: 'metricFilter',
-                     value: {
-                       metricType: 'dimension',
-                       metricValue: {
-                         name: 'last_update',
-                         model: 'segment_users',
-                         relationName: null,
-                         postOperation: {
-                           type: 'timestamp',
-                           value: 'hour',
-                         },
-                         pivot: null,
-                       },
-                       filters: [
-                         {
-                           valueType: 'timestamp',
-                           operator: 'between',
-                           value: 'P7D',
-                         },
-                       ],
-                     },
+                     dimension: 'last_update',
+                     operator: 'between',
+                     value: 'P7D',
                    },
                  ],
                },
@@ -113,11 +91,7 @@ local attrs = std.extVar('attributions');
                  model: 'segment_users',
                  dimensions: [],
                  measures: [
-                   {
-                     name: 'total_users',
-                     model: 'segment_users',
-                     relationName: null,
-                   },
+                   'total_users',
                  ],
                  reportOptions: {
                    chartOptions: {
@@ -133,27 +107,9 @@ local attrs = std.extVar('attributions');
                  limit: 1000,
                  filters: [
                    {
-                     type: 'metricFilter',
-                     value: {
-                       metricType: 'dimension',
-                       metricValue: {
-                         name: 'last_update',
-                         model: 'segment_users',
-                         relationName: null,
-                         postOperation: {
-                           type: 'timestamp',
-                           value: 'hour',
-                         },
-                         pivot: null,
-                       },
-                       filters: [
-                         {
-                           valueType: 'timestamp',
-                           operator: 'between',
-                           value: 'P30D',
-                         },
-                       ],
-                     },
+                     dimension: 'dimension',
+                     operator: 'between',
+                     value: 'P30D',
                    },
                  ],
                },
@@ -175,11 +131,7 @@ local attrs = std.extVar('attributions');
                  },
                ],
                measures: [
-                 {
-                   name: 'total_users',
-                   model: 'segment_users',
-                   relationName: null,
-                 },
+                 'total_users',
                ],
                reportOptions: {
                  chartOptions: {
