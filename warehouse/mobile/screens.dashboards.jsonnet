@@ -15,20 +15,10 @@ if std.extVar('screens_target') != null then [
         reportOptions: {
           model: 'screens',
           dimensions: [
-            {
-              name: 'context_device_type',
-              model: 'screens',
-              relationName: null,
-              postOperation: null,
-              pivot: null,
-            },
+            'context_device_type',
           ],
           measures: [
-            {
-              name: 'total_events',
-              model: 'screens',
-              relationName: null,
-            },
+            'total_events',
           ],
           reportOptions: {
             chartOptions: {
@@ -57,19 +47,10 @@ if std.extVar('screens_target') != null then [
         reportOptions: {
           model: 'screens',
           dimensions: [
-            {
-              name: 'context_app_name',
-              model: 'screens',
-              relationName: null,
-              postOperation: null,
-            },
+            'context_app_name',
           ],
           measures: [
-            {
-              name: 'total_events',
-              model: 'screens',
-              relationName: null,
-            },
+            'total_events',
           ],
           reportOptions: {
             chartOptions: {
@@ -100,11 +81,7 @@ if std.extVar('screens_target') != null then [
           model: 'screens',
           dimensions: [],
           measures: [
-            {
-              name: 'unique_users',
-              model: 'screens',
-              relationName: null,
-            },
+            'unique_users',
           ],
           reportOptions: null,
 
@@ -125,11 +102,7 @@ if std.extVar('screens_target') != null then [
           model: 'screens',
           dimensions: [],
           measures: [
-            {
-              name: 'unique_devices',
-              model: 'screens',
-              relationName: null,
-            },
+            'unique_devices',
           ],
           reportOptions: null,
 
@@ -149,19 +122,10 @@ if std.extVar('screens_target') != null then [
         reportOptions: {
           model: 'screens',
           dimensions: [
-            {
-              name: 'context_os_name',
-              model: 'screens',
-              relationName: null,
-              postOperation: null,
-            },
+            'context_os_name',
           ],
           measures: [
-            {
-              name: 'unique_users',
-              model: 'screens',
-              relationName: null,
-            },
+            'unique_users',
           ],
           reportOptions: {
             chartOptions: {
@@ -190,20 +154,10 @@ if std.extVar('screens_target') != null then [
         reportOptions: {
           model: 'screens',
           dimensions: [
-            {
-              name: 'context_device_manufacturer',
-              model: 'screens',
-              relationName: null,
-              postOperation: null,
-              pivot: null,
-            },
+            'context_device_manufacturer',
           ],
           measures: [
-            {
-              name: 'unique_users',
-              model: 'screens',
-              relationName: null,
-            },
+            'unique_users',
           ],
           reportOptions: {
             chartOptions: {
@@ -233,20 +187,10 @@ if std.extVar('screens_target') != null then [
         reportOptions: {
           model: 'screens',
           dimensions: [
-            {
-              name: 'context_network_carrier',
-              model: 'screens',
-              relationName: null,
-              postOperation: null,
-              pivot: null,
-            },
+            'context_network_carrier',
           ],
           measures: [
-            {
-              name: 'unique_users',
-              model: 'screens',
-              relationName: null,
-            },
+            'unique_users',
           ],
           reportOptions: {
             chartOptions: {
@@ -276,20 +220,10 @@ if std.extVar('screens_target') != null then [
         reportOptions: {
           model: 'screens',
           dimensions: [
-            {
-              name: 'context_device_type',
-              model: 'screens',
-              relationName: null,
-              postOperation: null,
-              pivot: null,
-            },
+            'context_device_type',
           ],
           measures: [
-            {
-              name: 'unique_users',
-              model: 'screens',
-              relationName: null,
-            },
+            'unique_users',
           ],
           reportOptions: {
             chartOptions: {

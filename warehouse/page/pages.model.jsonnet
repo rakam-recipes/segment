@@ -12,8 +12,6 @@ if std.extVar('pages_target') != null then {
     eventTimestamp: 'received_at',
     incremental: 'timestamp',
     userId: 'user_id',
-    deviceId: null,
-    sessionId: null,
   },
   measures: {
     pageviews: {
@@ -30,8 +28,8 @@ if std.extVar('pages_target') != null then {
       target: 'id',
     },
   } + if std.extVar('session_model_target') != null then { session: {
-    relationType: 'oneToOne',
-    joinType: 'leftJoin',
+    relation: 'oneToOne',
+    type: 'leftJoin',
     model: 'segment_rakam_pageview_sessions',
     source: 'anonymous_id',
     target: 'anonymous_id',

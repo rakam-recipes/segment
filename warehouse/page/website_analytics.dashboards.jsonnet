@@ -25,26 +25,10 @@ if std.extVar('pages_target') != null then [{
         model: 'segment_rakam_pageview_sessions',
         dimensions: null,
         measures: [
-          {
-            name: 'users',
-            model: 'segment_rakam_pageview_sessions',
-            relationName: null,
-          },
-          {
-            name: 'new_sessions',
-            model: 'segment_rakam_pageview_sessions',
-            relationName: null,
-          },
-          {
-            name: 'returning_sessions',
-            model: 'segment_rakam_pageview_sessions',
-            relationName: null,
-          },
-          {
-            name: 'sessions',
-            model: 'segment_rakam_pageview_sessions',
-            relationName: null,
-          },
+          'users',
+          'new_sessions',
+          'returning_sessions',
+          'sessions',
         ],
         reportOptions: {
           chartOptions: {
@@ -75,21 +59,11 @@ if std.extVar('pages_target') != null then [{
         dimensions: [
           {
             name: 'timestamp',
-            model: 'segment_pages',
-            relationName: null,
-            postOperation: {
-              type: 'timestamp',
-              value: 'day',
-            },
-            pivot: null,
+            timeframe: 'day',
           },
         ],
         measures: [
-          {
-            name: 'pageviews',
-            model: 'segment_pages',
-            relationName: null,
-          },
+          'pageviews',
         ],
         reportOptions: {
           chartOptions: {
@@ -119,11 +93,7 @@ if std.extVar('pages_target') != null then [{
         model: 'segment_pages',
         dimensions: null,
         measures: [
-          {
-            name: 'pageviews',
-            model: 'segment_pages',
-            relationName: null,
-          },
+          'pageviews',
         ],
         reportOptions: {
           chartOptions: {
@@ -153,26 +123,10 @@ if std.extVar('pages_target') != null then [{
         model: 'segment_rakam_pageview_sessions',
         dimensions: null,
         measures: [
-          {
-            name: 'average_session_count_per_user',
-            model: 'segment_rakam_pageview_sessions',
-            relationName: null,
-          },
-          {
-            name: 'pages_per_session',
-            model: 'segment_rakam_pageview_sessions',
-            relationName: null,
-          },
-          {
-            name: 'average_duration',
-            model: 'segment_rakam_pageview_sessions',
-            relationName: null,
-          },
-          {
-            name: 'bounce_rate',
-            model: 'segment_rakam_pageview_sessions',
-            relationName: null,
-          },
+          'average_session_count_per_user',
+          'pages_per_session',
+          'average_duration',
+          'bounce_rate',
         ],
         reportOptions: {
           chartOptions: {
