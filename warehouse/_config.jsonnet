@@ -11,8 +11,9 @@
       description: "The tracks table in your Segment Destination if you're tracking the custom events. See: https://segment.com/docs/destinations/#warehouse-schemas",
     },
     pages_table: {
-      type: 'schema',
+      type: 'table',
       hidden: true,
+      default: { table: 'pages' },
       description: 'The pageview table',
     },
     models: {
