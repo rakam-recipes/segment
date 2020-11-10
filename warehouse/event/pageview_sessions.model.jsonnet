@@ -1,9 +1,5 @@
 local util = import 'util.libsonnet';
 
-/* We will extract the first values of the events in a given session from pageview events and materialize it in our model.
- key: column_column
- value: dimension with target column name
- */
 
 local first_values = {
   // context_campaign_source: { column: 'utm_source' },
@@ -30,10 +26,6 @@ if std.extVar('session_model_target') != null then {
   hidden: false,
   category: 'Segment Events',
   target: std.extVar('session_model_target'),
-  persist: {
-    unique_key: 'session_id',
-    materialized: 'incremental',
-  },
   mappings: {
     eventTimestamp: 'session_start_timestamp',
     incremental: 'received_at',

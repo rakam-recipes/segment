@@ -1,3 +1,5 @@
+local util = import 'util.libsonnet';
+
 {
   label: 'All Segment Users',
   name: 'segment_users',
@@ -11,14 +13,5 @@
       aggregation: 'count',
     },
   },
-  dimensions: std.extVar('attributions') {
-    last_update: {
-      type: 'timestamp',
-      column: 'received_at',
-    },
-    user_id: {
-      column: 'id',
-      type: 'string',
-    },
-  },
+  dimensions: util.get_or_default({}, 'users.dimensions'),
 }
