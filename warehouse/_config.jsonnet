@@ -11,7 +11,7 @@
       description: "The tracks table in your Segment Destination if you're tracking the custom events. See: https://segment.com/docs/destinations/#warehouse-schemas",
     },
     models: {
-      type: 'generate-model',
+      type: 'discover-models',
       required: false,
       parent: 'warehouse_schema',
       description: 'Select the event types that you want to create models from',
