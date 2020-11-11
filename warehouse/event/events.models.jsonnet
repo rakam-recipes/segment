@@ -3,7 +3,7 @@ local taxonomy = import './taxonomy.libsonnet';
 local util = import 'util.libsonnet';
 
 [
-  std.mergePatch(common, taxonomy[key]) + {
+  std.mergePatch(common, util.get(taxonomy, key, null)) + {
     name: 'segment_' + key,
   }
   for key in std.objectFields(std.extVar('models'))
