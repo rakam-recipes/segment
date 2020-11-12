@@ -1,17 +1,19 @@
+local models = std.extVar('models')
+
 {
   mappings: {
     eventTimestamp: 'received_at',
     incremental: 'timestamp',
     userId: 'user_id',
   },
-  relations: {
+  relations: if std.objectHas(models, 'users') then {
     segment_users: {
       relationship: 'manyToOne',
       type: 'leftJoin',
       source: 'user_id',
       target: 'user_id',
     },
-  },
+  } else null,
   measures: {
     count_of_rows: {
       label: 'Total Events',
@@ -21,14 +23,16 @@
       aggregation: 'countUnique',
       column: 'user_id',
     },
-  } + if std.objectHas({}, 'context_app_version') then {
-    context_app_version: {
-      label: 'Last Seen App Version',
-      description: 'It helps you to identify deprecated events',
-      sql: 'max({{TABLE}}.context_app_version order by {{TABLE}}.received_at desc)',
-      type: 'string',
-    },
-  } else {},
+  } 
+//   + if std.objectHas({}, 'context_app_version') then {
+//     context_app_version: {
+//       label: 'Last Seen App Version',
+//       description: 'It helps you to identify deprecated events',
+//       sql: 'max({{TABLE}}.context_app_version order by {{TABLE}}.received_at desc)',
+//       type: 'string',
+//     },
+//   } else {}
+  ,
   dimensions: {
     uuid: {
       hidden: true,

@@ -18,5 +18,5 @@ local models = std.extVar('models');
     },
   })
   for entity in ['users', 'accounts', 'groups']
-  if !std.objectHas(models, entity)
+  if std.objectHas(models, entity)
 ]
