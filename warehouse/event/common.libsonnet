@@ -13,7 +13,8 @@
     },
   },
   measures: {
-    total_events: {
+    count_of_rows: {
+      label: 'Total Events',
       aggregation: 'count',
     },
     unique_users: {
