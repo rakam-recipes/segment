@@ -1,4 +1,4 @@
-local models = std.extVar('models')
+local models = std.extVar('models');
 
 {
   mappings: {
@@ -23,15 +23,15 @@ local models = std.extVar('models')
       aggregation: 'countUnique',
       column: 'user_id',
     },
-  } 
-//   + if std.objectHas({}, 'context_app_version') then {
-//     context_app_version: {
-//       label: 'Last Seen App Version',
-//       description: 'It helps you to identify deprecated events',
-//       sql: 'max({{TABLE}}.context_app_version order by {{TABLE}}.received_at desc)',
-//       type: 'string',
-//     },
-//   } else {}
+  }
+  //   + if std.objectHas({}, 'context_app_version') then {
+  //     context_app_version: {
+  //       label: 'Last Seen App Version',
+  //       description: 'It helps you to identify deprecated events',
+  //       sql: 'max({{TABLE}}.context_app_version order by {{TABLE}}.received_at desc)',
+  //       type: 'string',
+  //     },
+  //   } else {}
   ,
   dimensions: {
     uuid: {
