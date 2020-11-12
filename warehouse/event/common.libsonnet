@@ -30,10 +30,19 @@
     },
   } else {},
   dimensions: {
+    uuid: {
+      hidden: true,
+      description: 'is used to prevent duplicates. You can ignore this column.',
+    },
+    uuid_ts: {
+      hidden: true,
+      description: 'is used to keep track of when the specific event was last processed by our connector, specifically for deduping and debugging purposes. You can generally ignore this column.',
+    },
     id: {
       description: 'An ID attached to the event at execution time and used for deduplication at the server level.',
       column: 'id',
       type: 'string',
+      hidden: true,
     },
     sent_at: {
       description: 'The UTC timestamp set by library when the Segment API call was sent. This timestamp can be affected by device clock skew.',
