@@ -32,10 +32,12 @@
   dimensions: {
     uuid: {
       hidden: true,
+      column: 'uuid',
       description: 'is used to prevent duplicates. You can ignore this column.',
     },
     uuid_ts: {
       hidden: true,
+      column: 'uuid_ts',
       description: 'is used to keep track of when the specific event was last processed by our connector, specifically for deduping and debugging purposes. You can generally ignore this column.',
     },
     id: {
