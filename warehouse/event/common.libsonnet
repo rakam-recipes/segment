@@ -46,18 +46,6 @@
       type: 'string',
       column: 'anonymous_id',
     },
-    context_library_name: {
-      label: 'Segment Library Name',
-      category: 'Event',
-      type: 'string',
-      column: 'context_library_name',
-    },
-    context_library_version: {
-      label: 'Segment Library Version',
-      category: 'Event',
-      type: 'string',
-      column: 'context_library_version',
-    },
     original_timestamp: {
       description: 'The original timestamp set by the Segment library at the time the event is created. Keep in mind, this timestamp can be affected by device clock skew.',
       category: 'Event',

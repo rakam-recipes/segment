@@ -1,15 +1,17 @@
 {
   aliases: {
     hidden: true,
+    description: 'A table with your alias method calls. This table includes the traits you identify users by as top-level columns, for example <source>.aliases.email.',
   },
   groups: {
-
+    hidden: true,
+    description: 'A table with your group method calls. This table includes the traits you record for groups as top-level columns, for example <source>.groups.employee_count.',
   },
   identifies: {
     label: '[Segment] User Attributions',
+    description: 'A table with your identify method calls. This table includes the traits you identify users by as top-level columns, for example <source>.identifies.email.',
     mappings: {
       userId: 'id',
-      eventTimestamp: 'received_at',
     },
   },
   tracks: {
