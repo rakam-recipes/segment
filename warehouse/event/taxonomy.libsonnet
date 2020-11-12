@@ -34,8 +34,7 @@
     label: '[Segment] Pageview',
     description: "The pageview data that's collected via Segment Javascript SDK",
     measures: {
-      // rename
-      total_events: {
+      count_of_rows: {
         aggregation: 'count',
         label: 'Total Pageviews',
       },
@@ -51,21 +50,24 @@
       page_url_host: {
         description: 'Host value extracted from the url',
         type: 'string',
+        category: 'Event',
         sql: "split_part(split_part(replace(replace({{TABLE}}.url, 'http://', ''), 'https://', ''), '/', 1), '?', 1)",
       },
       page_referrer_host: {
         type: 'string',
+        category: 'Event',
         description: 'Referrer host extracted from the referrer url',
         sql: "split_part(split_part(replace(replace({{TABLE}}.referrer, 'http://', ''), 'https://', ''), '/', 1), '?', 1)",
       },
       gclid: {
         type: 'string',
+        category: 'Event',
         description: 'Google Click Identifier extracted from the referrer url',
         sql: "split_part(split_part(replace(replace({{TABLE}}.referrer, 'http://', ''), 'https://', ''), '/', 1), '?', 1)",
       },
       browser: {
         description: 'The browser type parsed from the user agent',
-        category: 'Website',
+        category: 'Event',
         type: 'string',
         sql: |||
           (CASE
@@ -125,6 +127,7 @@
       device_category: {
         description: 'The device category',
         type: 'string',
+        category: 'Event',
         sql: |||
           (case replace(split_part(split_part({{TABLE}}.context_user_agent, '(', 2), ' ', 1), ';', '')
               when 'iPhone' then 'iPhone'
