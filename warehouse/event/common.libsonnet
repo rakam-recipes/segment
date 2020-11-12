@@ -56,7 +56,7 @@
       column: 'anonymous_id',
     },
     original_timestamp: {
-      description: 'The original timestamp set by the Segment library at the time the event is created. Keep in mind, this timestamp can be affected by device clock skew.',
+      description: "The timestamp of the event in user's local timezone. Keep in mind, this timestamp can be affected by device clock skew.",
       category: 'Event',
       type: 'timestamp',
       column: 'original_timestamp',
@@ -77,6 +77,7 @@
       category: 'Event',
       type: 'string',
       column: 'user_id',
+      description: 'The ID set by analytics.setUserId',
     },
   },
 }
