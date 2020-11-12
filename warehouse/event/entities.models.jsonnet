@@ -8,7 +8,7 @@ local models = std.extVar('models');
     name: 'segment_' + entity,
     category: 'Segment Entities',
     mappings: {
-      userId: 'user_id',
+      userId: 'id',
     },
     measures: {
       count_of_rows: {
@@ -19,7 +19,7 @@ local models = std.extVar('models');
     dimensions: std.mapWithKey(function(key, value)
       local isContext = std.startsWith(value.column, 'context_');
       value {
-        category: if isContext then 'Context' else 'Event',
+        category: if isContext then 'Context' else 'Attribute',
         label: if isContext then std.substr(value.column, 8, 40) else null,
       }, models[entity].dimensions),
   })
