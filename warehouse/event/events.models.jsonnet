@@ -5,8 +5,11 @@ local util = import 'util.libsonnet';
 local models = std.extVar('models');
 
 [
-  std.mergePatch(models[event_type], std.mergePatch(common, util.get(taxonomy, event_type, {}))) + {
+  local definition = std.mergePatch(common, util.get(taxonomy, event_type, {}));
+
+  std.mergePatch(models[event_type], definition) + {
     name: 'segment_' + event_type,
+    label: if std.objectHas(definition.label) then definition.label else event_type,
     category: 'Segment Events',
   }
   for event_type in std.objectFields(models)

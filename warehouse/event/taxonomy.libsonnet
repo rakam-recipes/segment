@@ -1,6 +1,6 @@
 {
   aliases: {
-
+    hidden: true,
   },
   groups: {
 
