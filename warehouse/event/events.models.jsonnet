@@ -5,7 +5,7 @@ local util = import 'util.libsonnet';
 local models = std.extVar('models');
 
 [
-  std.mergePath(models[event_type], std.mergePatch(common, util.get(taxonomy, event_type, {}))) + {
+  std.mergePatch(models[event_type], std.mergePatch(common, util.get(taxonomy, event_type, {}))) + {
     name: 'segment_' + event_type,
     category: 'Segment Events',
   }
