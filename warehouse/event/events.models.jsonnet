@@ -4,7 +4,8 @@ local util = import 'util.libsonnet';
 
 [
   std.mergePatch(common, util.get(taxonomy, key, {})) + {
-    name: 'segment_' + key
+    name: 'segment_' + key,
+    category: 'Segment Users',
   }
   for key in std.objectFields(std.extVar('models'))
   if key != 'users'

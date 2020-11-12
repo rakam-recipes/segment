@@ -1,11 +1,12 @@
 local util = import 'util.libsonnet';
 
-if !std.objectHas(std.extVar('models'), 'users') then null else
-  {
+local models = std.extVar('models');
+
+if !std.objectHas(models, 'users') then null else
+  std.mergePatch(models.users, {
     label: 'All Segment Users',
     name: 'segment_users',
     category: 'Segment Users',
-    target: std.extVar('users_target'),
     mappings: {
       userId: 'user_id',
     },
@@ -14,5 +15,4 @@ if !std.objectHas(std.extVar('models'), 'users') then null else
         aggregation: 'count',
       },
     },
-    dimensions: util.get(std.extVar('models').users, 'dimensions', null),
-  }
+  })
