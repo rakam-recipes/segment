@@ -21,5 +21,5 @@ local models = std.extVar('models');
     category: 'Segment Events',
   }
   for event_type in std.objectFields(models)
-  if event_type != 'users'
+  if event_type != 'users' && event_type != 'accounts' && event_type != 'groups'
 ]
