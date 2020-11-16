@@ -18,7 +18,6 @@
     },
     models: {
       type: 'discover-models',
-      required: false,
       parent: 'warehouse_schema',
       description: 'Select the event types that you want to create models from',
     },
