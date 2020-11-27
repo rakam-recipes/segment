@@ -13,13 +13,13 @@ local models = std.extVar('models');
       unique_ips: {
         label: 'Unique IPs',
         aggregation: 'countUnique',
-        column: 'context_ip' 
-      }
+        column: 'context_ip',
+      },
     } else {} + if std.objectHas(discovered_dimensions, 'context_device_id') then {
       unique_devices: {
         aggregation: 'countUnique',
-        column: 'context_device_id'
-      }
+        column: 'context_device_id',
+      },
     } else {},
     dimensions: std.mapWithKey(function(key, value)
       local isContext = std.startsWith(value.column, 'context_');
