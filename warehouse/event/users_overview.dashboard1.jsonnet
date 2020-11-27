@@ -2,7 +2,7 @@ local attrs = std.extVar('attributions');
 
 {
   name: 'Users Overview',
-  category: 'Segment Users',
+  category: 'Segment Users', 
   filterSchema: [
     {
       name: 'dateRange',
