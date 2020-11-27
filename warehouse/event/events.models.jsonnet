@@ -9,12 +9,18 @@ local models = std.extVar('models');
   local discovered_dimensions = models[event_type].dimensions;
 
   local model = std.mergePatch(models[event_type] {
-    measures: if std.objectHas(discovered_dimensions, 'context_device_id') then {
+    measures: if std.objectHas(discovered_dimensions, 'context_ip') then {
+      unique_ips: {
+        label: 'Unique IPs',
+        aggregation: 'countUnique',
+        column: 'context_ip' 
+      }
+    } else {} + if std.objectHas(discovered_dimensions, 'context_device_id') then {
       unique_devices: {
         aggregation: 'countUnique',
         column: 'context_device_id'
       }
-    } else null,
+    } else {},
     dimensions: std.mapWithKey(function(key, value)
       local isContext = std.startsWith(value.column, 'context_');
       value {
