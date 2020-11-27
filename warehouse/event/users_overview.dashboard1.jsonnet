@@ -8,7 +8,7 @@ local attrs = std.extVar('attributions');
       name: 'dateRange',
       type: 'mappingDimension',
       value: {
-        name: 'eventTimestamp',
+        name: 'eventTimestamp', 
       },
       defaultValue: 'P1Y',
       isRequired: true,
