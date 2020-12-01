@@ -4,12 +4,12 @@
   description: 'It implements pageview, mobile and event analytics models for Segment Warehouse.',
   image: 'https://github.com/rakam-io/recipes/raw/master/segment/logo.png',
   variables: {  
-    // event analytics
+    // event analytics 
     warehouse_schema: { 
       label: 'Segment Warehouse Destination Schema',
       type: 'schema',
       description: "The tracks table in your Segment Destination if you're tracking the custom events. See: https://segment.com/docs/destinations/#warehouse-schemas",
-    },
+    }, 
     pages_table: {
       type: 'table',
       hidden: true,

@@ -1,5 +1,9 @@
 ---
 name: "segment__rakam_ui"
+seeds:
+  segment__rakam_ui:
+    enabled: true
+    schema: "rakam_aggregates"
 version: "1.0.0"
 profile: "default"
 source-paths:
