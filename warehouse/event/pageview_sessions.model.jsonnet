@@ -24,7 +24,8 @@ if (std.extVar('_dbt') && std.extVar('pages_table') != null) then {
   description: 'Website session information for the pageview event',
   hidden: false,
   category: 'Segment Events',
-  target: { schema: 'rakam_aggregates', table: 'segment_web_page_views__sessionized' },
+  // in order to avoid snowflake issues
+  sql: 'select * from rakam_aggregates.segment_web_page_views__sessionized',
   mappings: {
     eventTimestamp: 'session_start_timestamp',
     incremental: 'received_at',
