@@ -19,13 +19,13 @@ local last_values = {
 };
 
 
-if std.extVar('session_model_target') != null then {
+if !std.extVar('_public') && std.extVar('pages_table') != null then {
   name: 'segment_rakam_pageview_sessions',
   label: '[Segment] Pageview Sessions',
   description: 'Website session information for the pageview event',
   hidden: false,
   category: 'Segment Events',
-  target: std.extVar('session_model_target'),
+  target: { schema: 'rakam_aggregates', table: 'segment_web_page_views__sessionized' },
   mappings: {
     eventTimestamp: 'session_start_timestamp',
     incremental: 'received_at',
