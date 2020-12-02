@@ -12,7 +12,8 @@
     },
     pages_table: {
       type: 'table',
-      hidden: true,
+      parent: 'warehouse_schema',
+      required: false,
       default: { table: 'pages' },
       description: 'The pageview table',
     },
