@@ -1,7 +1,7 @@
 ---
-name: "segment__rakam_ui"
+name: "demo_db__rakam_test"
 seeds:
-  segment__rakam_ui:
+  demo_db__rakam_test:
     enabled: true
     schema: "rakam_aggregates"
 version: "1.0.0"
@@ -14,7 +14,7 @@ target-path: "target"
 models:
   segment:
     vars:
-      segment_page_views_table: "\"segment\".\"rakam_ui\".\"pages\""
+      segment_page_views_table: "\"DEMO_DB\".\"DEMO\".\"PAGES\""
       segment_sessionization_trailing_window: 3
       segment_inactivity_cutoff: "30 * 60"
       segment_pass_through_columns: []
