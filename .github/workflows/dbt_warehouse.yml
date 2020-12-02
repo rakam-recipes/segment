@@ -34,7 +34,8 @@ jobs:
       - name: Install DBT Dependencies
         run: cd warehouse/.dbt && dbt deps --profiles-dir ./
       - name: Seeds
-        run: cd warehouse/.dbt && dbt seeds --profiles-dir ./
+        if: github.event_name == 'repository_dispatch'
+        run: cd warehouse/.dbt && dbt seed --profiles-dir ./
       - name: Run DBT [Full Refresh] # perform full-refresh for new/modified models
         if: github.event_name == 'push' && (steps.changedfiles.outputs.modified != '' || steps.changedfiles.outputs.added != '')
         run: cd warehouse/.dbt && dbt run --profiles-dir ./ --full-refresh --threads 2 --models ${{ steps.changedfiles.outputs.modified }} ${{ steps.changedfiles.outputs.added }}

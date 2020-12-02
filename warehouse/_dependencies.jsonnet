@@ -1,5 +1,5 @@
 local util = import 'util.libsonnet';
-
+ 
 { 
   dbt: if (std.extVar('pages_table') != null) then {
     cronjob: null,
