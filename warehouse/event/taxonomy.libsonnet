@@ -39,13 +39,15 @@
         label: 'Total Pageviews',
       },
     },
-    relations: !std.extVar('_public') && std.extVar('pages_table') != null then { session: {
-      relationship: 'oneToOne',
-      type: 'leftJoin',
-      model: 'segment_rakam_pageview_sessions',
-      source: 'anonymous_id',
-      target: 'anonymous_id',
-    } } else {},
+    relations: if (!std.extVar('_public') && std.extVar('pages_table') != null) then {
+      session: {
+        relationship: 'oneToOne',
+        type: 'leftJoin',
+        model: 'segment_rakam_pageview_sessions',
+        source: 'anonymous_id',
+        target: 'anonymous_id',
+      },
+    } else {},
     dimensions: {
       page_url_host: {
         description: 'Host value extracted from the url',
