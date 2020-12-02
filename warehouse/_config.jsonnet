@@ -1,6 +1,6 @@
 {
   version: 1.1,
-  label: 'Segment Warehouse',
+  label: 'Segment Warehouse', 
   description: 'It implements pageview, mobile and event analytics models for Segment Warehouse.',
   image: 'https://github.com/rakam-io/recipes/raw/master/segment/logo.png',
   variables: {  
