@@ -39,7 +39,7 @@
         label: 'Total Pageviews',
       },
     },
-    relations: if std.extVar('session_model_target') != null then { session: {
+    relations: !std.extVar('_public') && std.extVar('pages_table') != null then { session: {
       relationship: 'oneToOne',
       type: 'leftJoin',
       model: 'segment_rakam_pageview_sessions',
