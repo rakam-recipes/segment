@@ -39,7 +39,7 @@
         label: 'Total Pageviews',
       },
     },
-    relations: if (!std.extVar('_public') && std.extVar('pages_table') != null) then {
+    relations: if (std.extVar('_dbt') && std.extVar('pages_table') != null) then {
       session: {
         relationship: 'oneToOne',
         type: 'leftJoin',
