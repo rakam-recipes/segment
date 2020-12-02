@@ -1,5 +1,9 @@
 ---
 name: "demo_db__rakam_test"
+seeds:
+  demo_db__rakam_test:
+    enabled: true
+    schema: "rakam_seeds"
 version: "1.0.0"
 profile: "default"
 source-paths:
