@@ -2,13 +2,13 @@ local attrs = std.extVar('attributions');
 
 {
   name: 'Users Overview',
-  category: 'Segment Users',
+  category: 'Segment Users', 
   filterSchema: [
     {
       name: 'dateRange',
       type: 'mappingDimension',
       value: {
-        name: 'eventTimestamp',
+        name: 'eventTimestamp', 
       },
       defaultValue: 'P1Y',
       isRequired: true,
