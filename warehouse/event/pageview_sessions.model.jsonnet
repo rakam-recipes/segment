@@ -18,7 +18,7 @@ local last_values = {
   context_page_search: { column: 'last_search' },
 };
 
-if !std.extVar('_dbt') && std.extVar('pages_table') != null then {
+if (std.extVar('_dbt') && std.extVar('pages_table') != null) then {
   name: 'segment_rakam_pageview_sessions',
   label: '[Segment] Pageview Sessions',
   description: 'Website session information for the pageview event',
