@@ -25,7 +25,7 @@ if (std.extVar('_dbt') && std.extVar('pages_table') != null) then {
   hidden: false,
   category: 'Segment Events',
   // in order to avoid snowflake issues
-  sql: 'select * from rakam_aggregates.segment_web_page_views__sessionized',
+  sql: 'select * from rakam_aggregates.segment_web_sessions',
   mappings: {
     eventTimestamp: 'session_start_timestamp',
     incremental: 'received_at',
