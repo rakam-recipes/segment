@@ -24,8 +24,7 @@ if (std.extVar('_dbt') && std.extVar('pages_table') != null) then {
   description: 'Website session information for the pageview event',
   hidden: false,
   category: 'Segment Events',
-  // in order to avoid snowflake issues
-  sql: 'select * from rakam_aggregates.segment_web_sessions',
+  target: { schema: 'RAKAM_AGGREGATES', table: 'segment_web_page_views__sessionized' },
   mappings: {
     eventTimestamp: 'session_start_timestamp',
     incremental: 'received_at',
@@ -35,7 +34,7 @@ if (std.extVar('_dbt') && std.extVar('pages_table') != null) then {
     average_duration: {
       aggregation: 'average',
       label: 'Average Duration',
-      sql: '{{TABLE}}.duration_in_s',
+      column: 'duration_in_s',
       reportOptions: {
         prefix: '',
         suffix: ' seconds',
@@ -49,7 +48,7 @@ if (std.extVar('_dbt') && std.extVar('pages_table') != null) then {
     users: {
       label: 'Distinct Users',
       aggregation: 'countUnique',
-      sql: '{{TABLE}}.blended_user_id',
+      column: 'blended_user_id',
     },
     pages_per_session: {
       label: 'Pages Per Session',
@@ -72,7 +71,7 @@ if (std.extVar('_dbt') && std.extVar('pages_table') != null) then {
     average_session_count_per_user: {
       label: 'Average Session Per User',
       aggregation: 'average',
-      sql: '{{TABLE}}.session_number',
+      column: 'session_number',
     },
   },
   dimensions: ({ [first_values[k].column]: first_values[k] for k in std.objectFields(first_values) }) +
@@ -87,31 +86,31 @@ if (std.extVar('_dbt') && std.extVar('pages_table') != null) then {
     //
     //    },
     duration_in_s: {
-      sql: '{{TABLE}}.duration_in_s',
+      column: 'duration_in_s',
     },
     duration_in_s_tier: {
-      sql: '{{TABLE}}.duration_in_s_tier',
+      column: 'duration_in_s_tier',
     },
     page_views: {
-      sql: '{{TABLE}}.page_views',
+      column: 'page_views',
     },
     first_referrer: {
-      sql: '{{TABLE}}.first_referrer',
+      column: 'first_referrer',
     },
     session_end_timestamp: {
-      sql: '{{TABLE}}.session_end_tstamp',
+      column: 'session_end_tstamp',
     },
     session_id: {
       type: 'string',
-      sql: '{{TABLE}}.session_id',
+      column: 'session_id',
     },
     session_number: {
       type: 'long',
-      sql: '{{TABLE}}.session_number',
+      column: 'session_number',
     },
     session_start_timestamp: {
       type: 'timestamp',
-      sql: '{{TABLE}}.session_start_tstamp',
+      column: 'session_start_tstamp',
     },
   },
 } else null
