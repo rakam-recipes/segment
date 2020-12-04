@@ -22,10 +22,10 @@ local models = std.extVar('models');
       },
     } else {},
     dimensions: std.mapWithKey(function(key, value)
-      local isContext = std.startsWith(value.column, 'context_');
+      local isContext = std.startsWith(key, 'context_');
       value {
         category: if isContext then 'Context' else 'Event',
-        label: if isContext then std.substr(value.column, 8, 40) else null,
+        label: if isContext then std.substr(key, 8, 40) else null,
       }, discovered_dimensions),
   }, definition);
 
