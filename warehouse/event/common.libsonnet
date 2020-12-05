@@ -7,11 +7,11 @@ local models = std.extVar('models');
     userId: 'user_id',
   },
   relations: if std.objectHas(models, 'users') then {
-    segment_users: { 
+    segment_users: {
       relationship: 'manyToOne',
       type: 'leftJoin',
       source: 'user_id',
-      target: 'user_id',
+      target: 'id',
     },
   } else null,
   measures: {
