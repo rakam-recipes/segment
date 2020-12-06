@@ -24,7 +24,7 @@ if (std.extVar('_dbt') && std.extVar('pages_table') != null) then {
   description: 'Website session information for the pageview event',
   hidden: false,
   category: 'Segment Events',
-  target: { schema: 'RAKAM_AGGREGATES', table: 'segment_web_page_views__sessionized' },
+  target: { schema: 'RAKAM_AGGREGATES', table: 'segment_web_sessions' },
   mappings: {
     eventTimestamp: 'session_start_timestamp',
     incremental: 'received_at',
