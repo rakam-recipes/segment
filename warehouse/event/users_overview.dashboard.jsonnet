@@ -1,4 +1,4 @@
-if false then {
+{
   name: 'Users Overview',
   reports: [{
     name: 'Total Users',
@@ -26,7 +26,7 @@ if false then {
       model: 'segment_users',
       measures: ['count_of_rows'],
       filters: [{
-        dimension: 'date_joined',
+        dimension: 'received_at',
         operator: 'between',
         value: 'P1W',
       }],
@@ -88,7 +88,7 @@ if false then {
       limit: 5000,
     },
   }, {
-    name: 'Daily new users this month',
+    name: 'Daily active users this month',
     x: 4,
     y: 0,
     height: 2,
@@ -103,7 +103,7 @@ if false then {
         timeframe: 'day',
       }],
       filters: [{
-        dimension: 'date_joined',
+        dimension: 'received_at',
         operator: 'between',
         value: 'P1M',
       }],
