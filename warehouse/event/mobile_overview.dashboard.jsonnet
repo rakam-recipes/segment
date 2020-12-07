@@ -1,4 +1,6 @@
-{
+local models = std.extVar('models');
+
+if std.objectHas(models, 'screens') then {
   name: 'Mobile Overview',
   category: 'Segment Events',
   filters: {
@@ -146,4 +148,4 @@
       limit: 1000,
     },
   }],
-}
+} else null
