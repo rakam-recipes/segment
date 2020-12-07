@@ -1,6 +1,6 @@
 local models = std.extVar('models');
 
-if std.objectHas(model, 'users') then {
+if std.objectHas(models, 'users') then {
   name: 'User Detail',
   filters: {
     id: {
