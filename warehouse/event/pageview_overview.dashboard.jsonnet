@@ -1,3 +1,5 @@
+local hasDbt = std.extVar('_dbt');
+
 if std.extVar('pages_table') != null then {
   name: 'Website Overview',
   filters: {
@@ -8,7 +10,7 @@ if std.extVar('pages_table') != null then {
       required: true,
     },
   },
-  reports: [{
+  reports: [if hasDbt then {
     name: 'Totals',
     x: 0,
     y: 0,
@@ -58,7 +60,7 @@ if std.extVar('pages_table') != null then {
       },
       limit: 5000,
     },
-  }, {
+  }, if hasDbt then {
     name: 'Daily Sessions',
     x: 0,
     y: 2,
