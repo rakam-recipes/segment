@@ -72,7 +72,7 @@
       model: 'segment_users',
       measures: ['count_of_rows'],
       filters: [{
-        dimension: 'received_at',
+        dimension: 'date_joined',
         operator: 'between',
         value: 'P1W',
       }, {
@@ -99,7 +99,7 @@
       model: 'segment_users',
       measures: ['count_of_rows'],
       dimensions: [{
-        name: 'received_at',
+        name: 'date_joined',
         timeframe: 'day',
       }],
       filters: [{
