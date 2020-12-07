@@ -1,4 +1,4 @@
-{
+if std.extVar('pages_table') != null then {
   name: 'Website Overview',
   filters: {
     date: {
@@ -81,4 +81,4 @@
       limit: 5000,
     },
   }],
-}
+} else null
