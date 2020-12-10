@@ -2,10 +2,10 @@ local models = std.extVar('models');
 local taxonomy = import './taxonomy.libsonnet';
 
 [
-  local definition = std.mergePatch(common, util.get(taxonomy, event_type, {}));
-  local discovered_dimensions = models[event_type].dimensions;
+  local definition = std.mergePatch(common, util.get(taxonomy, name, {}));
+  local discovered_dimensions = models[name].dimensions;
 
-  local model = std.mergePatch(models[event_type] {
+  local model = std.mergePatch(models[name] {
     // measures: {
     //   [if std.objectHas(discovered_dimensions, 'context_ip') then unique_ips]: {
     //     label: 'Unique IPs',
