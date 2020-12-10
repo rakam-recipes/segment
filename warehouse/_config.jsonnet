@@ -13,7 +13,6 @@
     models: {
       type: 'discover-models',
       parent: 'warehouse_schema',
-      description: 'Select the event types that you want to create models from',
     },
     pages_table: {
       type: 'table',

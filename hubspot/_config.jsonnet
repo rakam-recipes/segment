@@ -11,5 +11,9 @@
         placeholder: '(ex: hubspot)',
       },
     },
+    models: {
+      type: 'discover-models',
+      parent: 'schema',
+    },
   },
 }
