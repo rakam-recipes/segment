@@ -1,11 +1,12 @@
-local models = std.extVar('models');
+local models = [];
 local taxonomy = import './taxonomy.libsonnet';
 
 [
   local definition = taxonomy[name];
   local discovered_dimensions = models[name].dimensions;
 
-  local model = std.mergePatch(models[name] {
+  std.mergePatch(models[name] {
+    name: 'hubspot_' + name,
     // measures: {
     //   [if std.objectHas(discovered_dimensions, 'context_ip') then unique_ips]: {
     //     label: 'Unique IPs',
@@ -23,13 +24,9 @@ local taxonomy = import './taxonomy.libsonnet';
         category: if isContext then 'Property' else null,
         label: if isContext then std.substr(key, 9, 45) else null,
       }, discovered_dimensions),
-  }, definition);
-
-  model {
-    name: 'hubspot_' + name,
-    label: if std.objectHas(definition, 'label') then definition.label else name,
     category: 'Hubspot',
-  }
+  }, definition)
+
   for name in std.objectFields(models)
   if std.objectHas(taxonomy, name)
 ]
