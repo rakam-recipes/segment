@@ -1,4 +1,4 @@
-local models = [];
+local models = std.extVar('models');
 local taxonomy = import './taxonomy.libsonnet';
 
 [
