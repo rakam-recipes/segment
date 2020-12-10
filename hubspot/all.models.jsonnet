@@ -31,5 +31,5 @@ local taxonomy = import './taxonomy.libsonnet';
     category: 'Hubspot',
   }
   for name in std.objectFields(models)
-  if taxonomy.objectHas[name],
+  if taxonomy.objectHas[name]
 ]
