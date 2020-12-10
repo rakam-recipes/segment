@@ -2,7 +2,7 @@ local models = std.extVar('models');
 local taxonomy = import './taxonomy.libsonnet';
 
 [
-  local definition = std.mergePatch(common, util.get(taxonomy, name, {}));
+  local definition = taxonomy[name];
   local discovered_dimensions = models[name].dimensions;
 
   local model = std.mergePatch(models[name] {
@@ -31,4 +31,5 @@ local taxonomy = import './taxonomy.libsonnet';
     category: 'Hubspot',
   }
   for name in std.objectFields(models)
+  if taxonomy.objectHas[name],
 ]
