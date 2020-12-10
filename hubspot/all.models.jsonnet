@@ -5,7 +5,7 @@ local taxonomy = import './taxonomy.libsonnet';
   local definition = taxonomy[name];
   local discovered_dimensions = models[name].dimensions;
 
-  std.mergePatch(models[name] {
+  std.mergePatch(models[name], taxonomy[name] {
     name: 'hubspot_' + name,
     // measures: {
     //   [if std.objectHas(discovered_dimensions, 'context_ip') then unique_ips]: {
@@ -25,7 +25,7 @@ local taxonomy = import './taxonomy.libsonnet';
         label: if isContext then std.substr(key, 9, 45) else null,
       }, discovered_dimensions),
     category: 'Hubspot',
-  }, definition)
+  })
 
   for name in std.objectFields(models)
   if std.objectHas(taxonomy, name)
