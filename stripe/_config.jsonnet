@@ -12,4 +12,14 @@
       },
     },
   },
+  dependencies: {
+    dbt: {
+      packages: [
+        {
+          package: 'fivetran/dbt_stripe',
+          version: '0.0.1',
+        },
+      ],
+    },
+  },
 }

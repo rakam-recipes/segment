@@ -1,4 +1,0 @@
----
-packages:
-- package: "fishtown-analytics/segment"
-  version: "0.2.5"
