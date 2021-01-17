@@ -19,21 +19,18 @@
     name: {
       type: 'string',
       column: 'name',
-      hidden: false,
     },
     date: {
+      type: 'timestamp',
       sql: 'cast(start_time as date)',
-      timeframes: [],
     },
     buying_type: {
       type: 'string',
       column: 'buying_type',
-      hidden: false,
     },
     effective_status: {
       type: 'string',
       column: 'effective_status',
-      hidden: false,
     },
   },
 }

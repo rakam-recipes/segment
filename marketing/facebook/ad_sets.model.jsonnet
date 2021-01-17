@@ -35,12 +35,10 @@
     name: {
       type: 'string',
       column: 'name',
-      hidden: false,
     },
     account_id: {
       type: 'string',
       column: 'account_id',
-      hidden: true,
     },
     campaign_id: {
       type: 'string',
@@ -51,18 +49,15 @@
       description: 'The effective status of the ad set, which can be either its own status or caused by its parent campaign.',
       type: 'string',
       column: 'effective_status',
-      hidden: false,
     },
     configured_status: {
       description: 'The status set at the ad set level. It can be different from the effective status due to its parent campaign.',
       type: 'string',
       column: 'configured_status',
-      hidden: false,
     },
     end_time: {
       type: 'timestamp',
       column: 'end_time',
-      hidden: false,
     },
   },
 }

@@ -40,7 +40,6 @@
     bid_type: {
       type: 'string',
       column: 'bid_type',
-      hidden: false,
     },
     campaign_id: {
       type: 'string',
@@ -64,7 +63,6 @@
     status: {
       type: 'string',
       column: 'status',
-      hidden: false,
     },
   },
 }

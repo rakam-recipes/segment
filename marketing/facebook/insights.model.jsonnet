@@ -38,40 +38,32 @@ local mappingForConsolidatedMarketing = {
     facebook_ads: {
       relationType: 'manyToOne',
       joinType: 'leftJoin',
-      model: 'facebook_ads',
-      source: 'ad_id',
-      target: 'id',
+      sourceColumn: 'ad_id',
+      targetColumn: 'id',
     },
     facebook_ad_sets: {
       relationType: 'manyToOne',
       joinType: 'leftJoin',
-      model: 'facebook_ad_sets',
-      source: 'adset_id',
-      target: 'id',
+      sourceColumn: 'adset_id',
+      targetColumn: 'id',
     },
     facebook_campaigns: {
       relationType: 'manyToOne',
       joinType: 'leftJoin',
-      model: 'facebook_campaigns',
-      source: 'campaign_id',
-      target: 'id',
+      sourceColumn: 'campaign_id',
+      targetColumn: 'id',
     },
     facebook_ad_accounts: {
       relationType: 'manyToOne',
       joinType: 'leftJoin',
-      model: 'facebook_ad_accounts',
-      source: 'account_id',
-      target: 'id',
+      sourceColumn: 'account_id',
+      targetColumn: 'id',
     },
   },
   dimensions: mappingForConsolidatedMarketing {
     date: {
+      type: 'timestamp',
       sql: 'CAST({{TABLE}}.date_start AS DATE)',
-    },
-    ad_id: {
-      type: 'string',
-      column: 'ad_id',
-      hidden: true,
     },
   },
   measures: {
@@ -79,41 +71,34 @@ local mappingForConsolidatedMarketing = {
       description: 'The number of people who saw your ads at least once. Reach is different from impressions, which may include multiple views of your ads by the same people.',
       column: 'reach',
       aggregation: 'sum',
-      hidden: false,
     },
     impressions: {
       description: 'The number of times your ads were on screen.',
       column: 'impressions',
       aggregation: 'sum',
-      hidden: false,
     },
     social_spend: {
       description: 'The total amount you’ve spent so far for your ads showed with social information.',
       column: 'social_spend',
       aggregation: 'sum',
-      hidden: false,
     },
     clicks: {
       column: 'clicks',
       aggregation: 'sum',
-      hidden: false,
     },
     frequency: {
       description: 'The average number of times each person saw your ad.',
       column: 'frequency',
       aggregation: 'average',
-      hidden: false,
     },
     link_clicks: {
       column: 'link_clicks',
       aggregation: 'sum',
-      hidden: false,
     },
     post_engagements: {
       description: 'The total number of actions that people take involving your ads.',
       column: 'inline_post_engagements',
       aggregation: 'sum',
-      hidden: false,
     },
     total_spend: {
       description: 'The estimated total amount of money you’ve spent on your campaign, ad set or ad during its schedule.',
@@ -125,7 +110,6 @@ local mappingForConsolidatedMarketing = {
     },
     click_through_rate: {
       sql: '{{measure.clicks}}/{{measure.impressions}} * 100',
-      hidden: false,
       reportOptions: {
         suffix: '%',
       },
