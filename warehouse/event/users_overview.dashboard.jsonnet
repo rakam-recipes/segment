@@ -1,5 +1,6 @@
 {
   name: 'Users Overview',
+  category: 'Segment',
   reports: [{
     name: 'Total Users',
     x: 0,

@@ -2,6 +2,7 @@ local models = std.extVar('models');
 
 if std.objectHas(models, 'users') then {
   name: 'User Detail',
+  category: 'Segment',
   filters: {
     id: {
       model: 'segment_users',
