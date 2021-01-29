@@ -81,6 +81,9 @@ local mappingForConsolidatedMarketing = {
       description: 'The total amount you’ve spent so far for your ads showed with social information.',
       column: 'social_spend',
       aggregation: 'sum',
+      reportOptions: {
+        formatNumbers: '$0,0',
+      },
     },
     clicks: {
       column: 'clicks',
@@ -105,7 +108,7 @@ local mappingForConsolidatedMarketing = {
       sql: 'coalesce(spend, 0)',
       aggregation: 'sum',
       reportOptions: {
-        prefix: '$',
+        formatNumbers: '$0,0',
       },
     },
     click_through_rate: {
