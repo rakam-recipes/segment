@@ -56,8 +56,7 @@ local mappingForConsolidatedMarketing = {
     facebook_ad_accounts: {
       relationType: 'manyToOne',
       joinType: 'leftJoin',
-      sourceColumn: 'account_id',
-      targetColumn: 'id',
+      sql: "{{TABLE}}.account_id = concat('act_', id)",
     },
   },
   dimensions: mappingForConsolidatedMarketing {
