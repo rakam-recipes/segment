@@ -1,0 +1,9 @@
+---
+name: "userguiding__ugproduction"
+version: "1.0.0"
+profile: "default"
+source-paths:
+- "models"
+analysis-paths:
+- "analysis"
+target-path: "target"
