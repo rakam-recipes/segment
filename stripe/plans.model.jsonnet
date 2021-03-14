@@ -1,5 +1,6 @@
 {
-  name : "plans",
+  name : "stripe_plans",
+  category: 'Stripe',
   target : {
     database : "ug-production",
     schema : "stripe",

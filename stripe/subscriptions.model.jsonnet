@@ -1,5 +1,6 @@
 {
-  name : "subscriptions",
+  name : "stripe_subscriptions",
+  category: 'Stripe',
   target : {
     database : "ug-production",
     schema : "stripe",
@@ -9,7 +10,7 @@
     eventTimestamp: "_time"
   },
   relations: {
-    plans: {
+    stripe_plans: {
       target: "id",
       source: "plan_id"
     }
