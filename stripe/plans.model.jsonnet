@@ -6,7 +6,6 @@
     schema : "stripe",
     table : "plans"
   },
-  mappings : { },
   dimensions : {
     amount : {
       type : "integer",
