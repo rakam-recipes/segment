@@ -6,9 +6,6 @@
     schema : "stripe",
     table : "subscriptions"
   },
-  mappings: {
-    eventTimestamp: "_time"
-  },
   relations: {
     stripe_plans: {
       target: "id",
