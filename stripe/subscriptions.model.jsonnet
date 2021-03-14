@@ -9,8 +9,7 @@
     eventTimestamp: "_time"
   },
   relations: {
-    relationName: {
-      model: "plans",
+    plans: {
       target: "id",
       source: "plan_id"
     }
