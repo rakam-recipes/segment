@@ -1,7 +1,7 @@
 {
   version: 1.1,
-  label: 'Segment Warehouse',
-  description: 'It implements pageview, mobile and event analytics models for Segment Warehouse.',
+  label: 'Segment Events Analytics',
+  description: 'It lets you analyze pageview, mobile and event analytics models loaded into your Data warehouse by Segment.',
   image: 'https://github.com/rakam-io/recipes/raw/master/segment/logo.png',
   variables: {
     // event analytics
