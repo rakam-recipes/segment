@@ -2,6 +2,7 @@
   version: 1.0,
   label: 'Segment Stripe',
   description: 'It lets you analyze the Stripe data exported via Segment integrations',
+  image: 'https://github.com/rakam-io/recipes/raw/master/segment/logo.png',
   tags: ['finance', 'saas'],
   variables: {
     schema: {
