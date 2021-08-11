@@ -1,3 +1,5 @@
+local models = std.extVar('models');
+
 if std.objectHas(models, 'users') then {
   name: 'Users Overview',
   category: 'Segment',
