@@ -1,6 +1,6 @@
 local models = std.extVar('models');
 
-if std.objectHas('contacts') then {
+if std.objectHas(models, 'contacts') then {
   category: 'Hubspot',
   description: "Contacts represent people in an Organization's address book. ",
   mappings: {

@@ -1,6 +1,6 @@
 local models = std.extVar('models');
 
-if std.objectHas('deals') then {
+if std.objectHas(models, 'deals') then {
   category: 'Hubspot',
   name: 'hubspot_deals',
   description: 'Deals for HubSpot CRM.',

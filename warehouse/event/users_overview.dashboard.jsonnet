@@ -1,4 +1,4 @@
-{
+if std.objectHas(models, 'users') then {
   name: 'Users Overview',
   category: 'Segment',
   reports: [{
@@ -116,4 +116,4 @@
       limit: 5000,
     },
   }],
-}
+} else null

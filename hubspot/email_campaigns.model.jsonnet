@@ -1,6 +1,6 @@
 local models = std.extVar('models');
 
-if std.objectHas('email_campaigns') then {
+if std.objectHas(models, 'email_campaigns') then {
   description: 'Email campaigns for marketing automation.',
   dimensions: {
     app_name: {
