@@ -85,5 +85,11 @@ local models = std.extVar('models');
       column: 'user_id',
       description: 'The ID set by analytics.setUserId',
     },
+    rakam_id: {
+      sql: 'coalesce({{TABLE}}.user_id,{{TABLE}}.anonymous_id)',
+      type: 'string',
+      category: 'Event',
+      description: 'User id for accurately calculating not logged in users'
+    }
   },
 }
