@@ -217,15 +217,6 @@
       aggregation: 'count',
       type: 'double',
       hidden: false,
-    },
-    read: {
-      reportOptions: {
-        formatNumbers: true,
-      },
-      column: 'read',
-      aggregation: 'count',
-      type: 'double',
-      hidden: false,
-    },
+    }
   },
 }
